@@ -1,0 +1,2195 @@
+{
+ "draft": 1,
+ "shots": [
+  {
+   "id": "s001",
+   "section": "I. Aperitivo",
+   "b0": 0,
+   "b1": 5,
+   "t0": 0.0,
+   "t1": 3.482,
+   "lines": [
+    0
+   ],
+   "lyric": "(Mamma mia, che fame)",
+   "how": "F",
+   "picture": "An empty plate. Her nails drum on the tablecloth.",
+   "type": "film subtitle, yellow italic",
+   "gfx": "black bars open like a cinema curtain; small tag ‘[en italiano]’",
+   "plates": [
+    {
+     "name": "empty-plate",
+     "prompt": "close-up from table height of an empty white plate with a fork and knife, a woman's bare tan forearm and hand with glossy black nails resting on the white tablecloth, her fingers drumming impatiently beside the plate, no sleeve, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s002",
+   "section": "I. Aperitivo",
+   "b0": 5,
+   "b1": 13,
+   "t0": 3.482,
+   "t1": 8.38,
+   "lines": [
+    1
+   ],
+   "lyric": "(Dov’è la pizza?)",
+   "how": "M",
+   "picture": "She slumps behind the plate, chin on her hands, looking for the waiter. On the last beat a pizza lands in front of her.",
+   "type": "film subtitle",
+   "gfx": "none until the pizza lands: the frame shakes on the kick",
+   "plates": [
+    {
+     "name": "chin-wait",
+     "prompt": "medium close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, slumped with her chin on her folded hands on the table behind an empty white plate, bored hungry eyes looking off to the side for the waiter, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s003",
+   "section": "II. Chorus 1",
+   "b0": 13,
+   "b1": 16,
+   "t0": 8.38,
+   "t1": 10.217,
+   "lines": [
+    2
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "L",
+   "picture": "She sings to the lens, a dripping slice in her hand.",
+   "type": "NUTRITION LABEL: the row ‘Grasa’ is struck out and ‘QUESO’ slams in over it",
+   "gfx": "the label panel builds: Información Nutricional, thick rules",
+   "plates": [
+    {
+     "name": "sing-slice",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, singing straight into the lens with a huge grin, holding a dripping pizza slice in her bare hand up beside her face, a rope of melted cheese hanging from it, no fork and no cutlery, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s004",
+   "section": "II. Chorus 1",
+   "b0": 16,
+   "b1": 21,
+   "t0": 10.217,
+   "t1": 13.278,
+   "lines": [
+    3
+   ],
+   "lyric": "No es culpa, es progreso",
+   "how": "M",
+   "picture": "She flexes a bicep like a gym progress photo. The pizza waits on its plate.",
+   "type": "label row ‘Culpa 0%’; ‘PROGRESO’ as a loading bar",
+   "gfx": "the bar fills one chunk per beat",
+   "plates": [
+    {
+     "name": "flex",
+     "prompt": "medium shot of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, flexing one bicep like a bodybuilder with a proud grin at the lens, her other hand on her hip, nothing in her hands, a whole pizza on a plate on the table in front of her, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s005",
+   "section": "II. Chorus 1",
+   "b0": 21,
+   "b1": 24,
+   "t0": 13.278,
+   "t1": 15.115,
+   "lines": [
+    4
+   ],
+   "lyric": "Mira cómo me lo como",
+   "how": "M",
+   "picture": "Mouth wide open, eyes on the lens, a big pepperoni slice on its way in.",
+   "type": "kinetic type: ‘cómo / como’ tumbles and doubles",
+   "gfx": "bite-mark cutouts eat the type",
+   "plates": [
+    {
+     "name": "mira",
+     "have": "plates-11/mira-b"
+    }
+   ]
+  },
+  {
+   "id": "s006",
+   "section": "II. Chorus 1",
+   "b0": 24,
+   "b1": 29,
+   "t0": 15.115,
+   "t1": 18.176,
+   "lines": [
+    5
+   ],
+   "lyric": "Y te mando un beso",
+   "how": "L",
+   "picture": "She blows a saucy kiss into the lens and winks.",
+   "type": "handwritten on a napkin",
+   "gfx": "a tomato-sauce kiss print stamps onto the lens on ‘beso’",
+   "plates": [
+    {
+     "name": "kiss",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, blowing a kiss straight into the lens with tomato sauce on her lips and one eye winking, a pizza crust in her fingers, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s007",
+   "section": "II. Chorus 1",
+   "b0": 29,
+   "b1": 32,
+   "t0": 18.176,
+   "t1": 20.013,
+   "lines": [
+    6
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "M",
+   "picture": "The reveal: the couple. She devours, he calculates.",
+   "type": "label, small, pinned to her side of the table",
+   "gfx": "his side of the frame gets a cold blue HUD, hers stays warm",
+   "plates": [
+    {
+     "name": "couple-wide",
+     "prompt": "wide shot of a couple at a table: on the left the woman from the first two reference images, the same face, tan skin, jet-black hair in a messy bun with loose strands, winged eyeliner, coral lips, a black patent-leather halter top and choker devours a huge pizza with both hands; on the right the man from the third reference image, the same face, slim and clean-shaven in a pale blue polo shirt with neat side-parted brown hair sits stiffly with sparkling water and a small salad, tapping a pocket calculator, frowning at her plate, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url> <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s008",
+   "section": "II. Chorus 1",
+   "b0": 32,
+   "b1": 36,
+   "t0": 20.013,
+   "t1": 22.462,
+   "lines": [
+    7
+   ],
+   "lyric": "No me vengas con complejos",
+   "how": "M",
+   "picture": "She wags a cheesy finger at him over the table.",
+   "type": "rubber stamp: RECHAZADO over a diet-app notification",
+   "gfx": "his phone notification slides in and is stamped",
+   "plates": [
+    {
+     "name": "finger-wag",
+     "prompt": "medium shot over the shoulder of a man in a pale blue polo shirt: the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top leans across the table with one index finger raised and wagging side to side in a firm no, eyebrow raised, unimpressed, her other hand resting on a pizza box, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-03"
+    }
+   ]
+  },
+  {
+   "id": "s009",
+   "section": "II. Chorus 1",
+   "b0": 36,
+   "b1": 40,
+   "t0": 22.462,
+   "t1": 24.911,
+   "lines": [
+    8
+   ],
+   "lyric": "Tú contando calorías",
+   "how": "M",
+   "picture": "Him, hunched over the calculator, punching keys.",
+   "type": "seven-segment calculator digits",
+   "gfx": "computer-vision tags put a kcal number on everything he looks at; the total races",
+   "plates": [
+    {
+     "name": "him-calc",
+     "prompt": "close-up of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair, hunched over a pocket calculator with a blank display, tongue between his teeth, punching the keys with one finger, a glass of sparkling water and a small green salad in front of him, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s010",
+   "section": "II. Chorus 1",
+   "b0": 40,
+   "b1": 45,
+   "t0": 24.911,
+   "t1": 27.972,
+   "lines": [
+    9
+   ],
+   "lyric": "Yo contando pepperonis",
+   "how": "F",
+   "picture": "Top-down pizza. Her finger taps each pepperoni.",
+   "type": "counter: PEPPERONIS 01, 02, 03…",
+   "gfx": "a tracking box snaps onto each pepperoni on the eighth notes",
+   "plates": [
+    {
+     "name": "pizza-top",
+     "prompt": "top-down photograph of a whole pepperoni pizza on a white tablecloth, a woman's hand with glossy black nails pointing at one pepperoni slice, a red glass candle holder at the edge of frame, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s011",
+   "section": "III. The Italian chorus",
+   "b0": 45,
+   "b1": 52,
+   "t0": 27.972,
+   "t1": 32.258,
+   "lines": [
+    10
+   ],
+   "lyric": "(Amore, non è grasso: è formaggio)",
+   "how": "M",
+   "picture": "Three old waiters watch her from the kitchen door. One whispers to the next.",
+   "type": "film subtitle",
+   "gfx": "‘[en italiano]’ tag; a tiny heart over the i of formaggio",
+   "plates": [
+    {
+     "name": "waiters-watch",
+     "prompt": "medium shot of three old Italian waiters in white jackets and black bow ties standing shoulder to shoulder at the kitchen door, watching something across the room with wide eyes, one whispering behind his hand to the next, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s012",
+   "section": "III. The Italian chorus",
+   "b0": 52,
+   "b1": 57,
+   "t0": 32.258,
+   "t1": 35.319,
+   "lines": [
+    11
+   ],
+   "lyric": "(Un’altra fetta, per favore)",
+   "how": "F",
+   "picture": "A white-gloved hand slides another slice onto her plate. Her finger is already up.",
+   "type": "film subtitle",
+   "gfx": "order ticket prints: 1 × fetta",
+   "plates": [
+    {
+     "name": "another-slice",
+     "prompt": "close-up of a waiter's white-gloved hand sliding a huge pizza slice from a silver server onto a white plate, beside it a woman's hand with glossy black nails holding up one finger, the edge of her black patent-leather halter top in the corner of the frame, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s013",
+   "section": "IV. Verse 1",
+   "b0": 57,
+   "b1": 61,
+   "t0": 35.319,
+   "t1": 37.768,
+   "lines": [
+    12
+   ],
+   "lyric": "Me miraste la cintura",
+   "how": "S",
+   "picture": "His eyes drop to her waist.",
+   "type": "small caption at his eye line",
+   "gfx": "his HUD draws a measuring line and a question mark",
+   "plates": [
+    {
+     "name": "him-looks-down",
+     "prompt": "close-up of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair across a table, his eyes dropping to look down at something below the frame with a small worried frown, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s014",
+   "section": "IV. Verse 1",
+   "b0": 61,
+   "b1": 65,
+   "t0": 37.768,
+   "t1": 40.217,
+   "lines": [
+    13
+   ],
+   "lyric": "Con carita preocupada",
+   "how": "S",
+   "picture": "His worried little face, very close.",
+   "type": "tiny fussy italic",
+   "gfx": "the HUD blinks: PREOCUPADO 87%",
+   "plates": [
+    {
+     "name": "him-worried",
+     "have": "plates-01/him-worried"
+    }
+   ]
+  },
+  {
+   "id": "s015",
+   "section": "IV. Verse 1",
+   "b0": 65,
+   "b1": 68,
+   "t0": 40.217,
+   "t1": 42.054,
+   "lines": [
+    14
+   ],
+   "lyric": "Yo pensé que era ternura",
+   "how": "S",
+   "picture": "Her, touched, hand on her heart.",
+   "type": "soft script",
+   "gfx": "hearts drift up; the glow of a telenovela",
+   "plates": [
+    {
+     "name": "her-tender",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, one hand over her heart, head tilted, looking across the table with soft dreamy eyes and a touched smile, soft candle glow, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s016",
+   "section": "IV. Verse 1",
+   "b0": 68,
+   "b1": 73,
+   "t0": 42.054,
+   "t1": 45.115,
+   "lines": [
+    15
+   ],
+   "lyric": "Tú ya estabas sacando cuentas",
+   "how": "S",
+   "picture": "Smash cut: he pulls a mile of paper tape out of his calculator and studies it gravely.",
+   "type": "thermal receipt print",
+   "gfx": "the receipt lists her dinner in kcal; the lyric is the last line of the receipt",
+   "plates": [
+    {
+     "name": "calc-tape",
+     "prompt": "medium close-up of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair, gravely studying an absurdly long curl of white paper tape that spills out of a pocket calculator in his hand and piles up across the white tablecloth around his salad, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s017",
+   "section": "IV. Verse 1",
+   "b0": 73,
+   "b1": 75,
+   "t0": 45.115,
+   "t1": 46.339,
+   "lines": [
+    16
+   ],
+   "lyric": "Me dijiste: “ya fue mucho”",
+   "how": "S",
+   "picture": "He holds up a palm: stop.",
+   "type": "speech quote, his colour",
+   "gfx": "a road sign frame around his hand",
+   "plates": [
+    {
+     "name": "him-stop",
+     "prompt": "medium close-up of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair, holding up one flat palm like a stop sign toward the lens, lips pursed, stern, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s018",
+   "section": "IV. Verse 1",
+   "b0": 75,
+   "b1": 77,
+   "t0": 46.339,
+   "t1": 47.564,
+   "lines": [
+    17
+   ],
+   "lyric": "Yo entendí: “pide una más”",
+   "how": "S",
+   "picture": "She cups her ear, grins, and calls the waiter with one finger.",
+   "type": "speech quote, her colour",
+   "gfx": "the stop sign flips to + 1",
+   "plates": [
+    {
+     "name": "her-order",
+     "prompt": "medium close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, cupping one hand behind her ear with a mischievous grin while her other hand holds one finger up high to call the waiter, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s019",
+   "section": "IV. Verse 1",
+   "b0": 77,
+   "b1": 79,
+   "t0": 47.564,
+   "t1": 48.788,
+   "lines": [
+    18
+   ],
+   "lyric": "Si tú sueñas con ensalada",
+   "how": "S",
+   "picture": "His salad, alone and sad.",
+   "type": "dreamy thought bubble",
+   "gfx": "vignette, a harp gliss of sparkles",
+   "plates": [
+    {
+     "name": "salad-sad",
+     "prompt": "close-up of a small sad green salad in a white bowl on a white tablecloth, three limp lettuce leaves and one cherry tomato, lit by a single spotlight, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s020",
+   "section": "IV. Verse 1",
+   "b0": 79,
+   "b1": 81,
+   "t0": 48.788,
+   "t1": 50.013,
+   "lines": [
+    19
+   ],
+   "lyric": "Pues invítala a cenar",
+   "how": "S",
+   "picture": "He sits on one side of the table. Across from him, on the other chair, a big plate of salad: his date.",
+   "type": "place card",
+   "gfx": "a reservation card: mesa para dos",
+   "plates": [
+    {
+     "name": "salad-date",
+     "prompt": "wide side view of a small restaurant table for two: on the left chair sits the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair, leaning on his elbows and gazing tenderly across the table; nobody sits on the wooden chair on the right, only a big white plate piled high with green salad resting on its seat; a candle on the table between them, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-06"
+    }
+   ]
+  },
+  {
+   "id": "s021",
+   "section": "IV. Verse 1",
+   "b0": 81,
+   "b1": 83,
+   "t0": 50.013,
+   "t1": 51.237,
+   "lines": [
+    20
+   ],
+   "lyric": "Yo no vine por consejos",
+   "how": "S",
+   "picture": "Talk to the hand: her palm blocks the lens, mouth full.",
+   "type": "big, on her palm",
+   "gfx": "the type sits on her palm, tracked",
+   "plates": [
+    {
+     "name": "talk-hand",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, thrusting her open palm straight at the lens so that the hand fills the left half of the frame out of focus, her face behind it with her cheeks full and her eyes rolling, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-03"
+    }
+   ]
+  },
+  {
+   "id": "s022",
+   "section": "IV. Verse 1",
+   "b0": 83,
+   "b1": 85,
+   "t0": 51.237,
+   "t1": 52.462,
+   "lines": [
+    21
+   ],
+   "lyric": "Yo vine por el menú",
+   "how": "S",
+   "picture": "A full close-up of a classic pizzeria menu. Her line is one of the dishes.",
+   "type": "MENU TYPE: set as a dish on the menu, with dotted leaders and a price",
+   "gfx": "the menu is real: pizzas and prices; the engine sets the lyric into the empty row",
+   "plates": [
+    {
+     "name": "menu",
+     "have": "edits/menu"
+    }
+   ]
+  },
+  {
+   "id": "s023",
+   "section": "IV. Verse 1",
+   "b0": 85,
+   "b1": 87,
+   "t0": 52.462,
+   "t1": 53.686,
+   "lines": [
+    22
+   ],
+   "lyric": "Si vas a hablar de mi cuerpo",
+   "how": "S",
+   "picture": "She stands on the booth seat, hands on hips, from below.",
+   "type": "tall condensed caps stacked beside her",
+   "gfx": "type tucks behind her body",
+   "plates": [
+    {
+     "name": "booth-stand",
+     "prompt": "full-length shot from a low angle of the woman from the reference images, the same face, tan skin, jet-black hair pulled back in a messy bun with her face clear of hair, winged eyeliner, coral lips, a black patent-leather halter top and choker, loose grey trousers, standing on the seat of a red leather booth with her hands on her hips, chin up, towering over the table, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s024",
+   "section": "IV. Verse 1",
+   "b0": 87,
+   "b1": 89,
+   "t0": 53.686,
+   "t1": 54.911,
+   "lines": [
+    23
+   ],
+   "lyric": "Di: “qué buena estás tú”",
+   "how": "L",
+   "picture": "Hair flip. She sings it to the lens and points at herself with her thumb.",
+   "type": "giant quote marks",
+   "gfx": "flash frames on each of the three stressed syllables",
+   "plates": [
+    {
+     "name": "buena",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, flipping her hair and singing straight into the lens with a cocky smile, pointing at herself with one thumb, nothing in her hands and no food in the frame, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s025",
+   "section": "V. Pre-chorus",
+   "b0": 89,
+   "b1": 93,
+   "t0": 54.911,
+   "t1": 57.36,
+   "lines": [
+    24
+   ],
+   "lyric": "Tú con tu agua sin gas",
+   "how": "M",
+   "picture": "Split screen, left: he sips still water through a paper straw.",
+   "type": "comparison table, column TÚ",
+   "gfx": "a versus chart builds: agua sin gas, 0 kcal, 0 alegría",
+   "plates": [
+    {
+     "name": "him-water",
+     "prompt": "medium shot of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair, sitting bolt upright sipping still water from a glass through a paper straw, pinky raised, joyless, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s026",
+   "section": "V. Pre-chorus",
+   "b0": 93,
+   "b1": 97,
+   "t0": 57.36,
+   "t1": 59.809,
+   "lines": [
+    25
+   ],
+   "lyric": "Yo con masa artesanal",
+   "how": "M",
+   "picture": "Right: the pizzaiolo throws dough in front of the fire.",
+   "type": "column YO",
+   "gfx": "the chart's right column fills with stars",
+   "plates": [
+    {
+     "name": "dough-toss",
+     "prompt": "medium shot of a big pizzaiolo with a thick moustache in a white apron tossing a spinning disc of pizza dough high in the air in front of a blazing wood-fired oven in a restaurant kitchen, flour hanging in the air, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s027",
+   "section": "V. Pre-chorus",
+   "b0": 97,
+   "b1": 102,
+   "t0": 59.809,
+   "t1": 62.87,
+   "lines": [
+    26
+   ],
+   "lyric": "Tú diciendo: “eso hace mal”",
+   "how": "S",
+   "picture": "He wags a finger at the lens.",
+   "type": "health-warning box, black on white",
+   "gfx": "the box looks like the warning on a cigarette pack",
+   "plates": [
+    {
+     "name": "him-wag",
+     "prompt": "medium close-up of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair, wagging one finger at the lens with a disapproving frown, his other hand resting on a small green salad, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s028",
+   "section": "V. Pre-chorus",
+   "b0": 102,
+   "b1": 107,
+   "t0": 62.87,
+   "t1": 65.931,
+   "lines": [
+    27
+   ],
+   "lyric": "Yo: “una grande pa’ llevar”",
+   "how": "M",
+   "picture": "She slams a giant pizza box down between them. In the stop, the lid shuts on him.",
+   "type": "stamped on the box lid",
+   "gfx": "the lid is the wipe into the chorus",
+   "plates": [
+    {
+     "name": "box-slam",
+     "prompt": "medium shot at a restaurant table: the woman from the first two reference images, the same face, tan skin, jet-black hair in a messy bun with loose strands, winged eyeliner, coral lips, a black patent-leather halter top and choker slams an enormous closed white pizza box down on the table in front of a startled the man from the third reference image, the same face, slim and clean-shaven in a pale blue polo shirt with neat side-parted brown hair, napkins flying, she grins, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url> <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s029",
+   "section": "VI. Chorus 2",
+   "b0": 107,
+   "b1": 110,
+   "t0": 65.931,
+   "t1": 67.768,
+   "lines": [
+    28
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "L",
+   "picture": "She kneels on the table and sings into a slice.",
+   "type": "the label, full frame behind her",
+   "gfx": "type tucks behind her; QUESO in the heaviest weight",
+   "plates": [
+    {
+     "name": "table-top",
+     "prompt": "full-length shot of the woman from the reference images, the same face, tan skin, jet-black hair pulled back in a messy bun with her face clear of hair, winged eyeliner, coral lips, a black patent-leather halter top and choker, loose grey trousers, kneeling on top of a restaurant table belting out a song with her mouth wide open, a pizza slice raised to her lips in one hand and her other arm thrown out wide with an empty open hand, plates and glasses pushed aside, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-03"
+    }
+   ]
+  },
+  {
+   "id": "s030",
+   "section": "VI. Chorus 2",
+   "b0": 110,
+   "b1": 115,
+   "t0": 67.768,
+   "t1": 70.829,
+   "lines": [
+    29
+   ],
+   "lyric": "No es culpa, es progreso",
+   "how": "S",
+   "picture": "Two plates from above: the salad and the bitten slice.",
+   "type": "ANTES / DESPUÉS cards; progress bar",
+   "gfx": "a wipe slides from salad to slice on the downbeat",
+   "plates": [
+    {
+     "name": "before-after",
+     "prompt": "top-down photograph of two white plates side by side on a white tablecloth: on the left a small sad green salad, on the right a huge glossy pizza slice with one bite taken out of it, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s031",
+   "section": "VI. Chorus 2",
+   "b0": 115,
+   "b1": 118,
+   "t0": 70.829,
+   "t1": 72.666,
+   "lines": [
+    30
+   ],
+   "lyric": "Mira cómo me lo como",
+   "how": "M",
+   "picture": "Three bites, one per beat. On the second she crosses her eyes.",
+   "type": "one word per bite",
+   "gfx": "hard cuts on the kicks",
+   "plates": [
+    {
+     "name": "bite-b",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, head thrown back, taking a huge bite from the tip of a pizza slice dangled above her open mouth, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    },
+    {
+     "name": "bite-c",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, biting a pizza slice folded in half, cheeks bulging, eyes wide at the lens, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    },
+    {
+     "name": "bite-d",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, tearing a bite off a pizza slice with her teeth, sauce on her cheek, one eye shut, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s032",
+   "section": "VI. Chorus 2",
+   "b0": 118,
+   "b1": 123,
+   "t0": 72.666,
+   "t1": 75.727,
+   "lines": [
+    31
+   ],
+   "lyric": "Y te mando un beso",
+   "how": "M",
+   "picture": "She plants a saucy kiss on an old waiter's cheek.",
+   "type": "napkin handwriting",
+   "gfx": "the kiss print stays on his cheek and pulses on the beat",
+   "plates": [
+    {
+     "name": "kiss-waiter",
+     "prompt": "medium shot of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, kissing the cheek of a delighted an old Italian waiter in a white jacket and black bow tie who beams with his eyes shut, one small neat red kiss print on his other cheek, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-03"
+    }
+   ]
+  },
+  {
+   "id": "s033",
+   "section": "VI. Chorus 2",
+   "b0": 123,
+   "b1": 126,
+   "t0": 75.727,
+   "t1": 77.564,
+   "lines": [
+    32
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "S",
+   "picture": "The whole room holds slices up like lighters.",
+   "type": "label",
+   "gfx": "the slices sway; the label rows tick",
+   "plates": [
+    {
+     "name": "slices-up",
+     "prompt": "wide shot of a whole dining room, a dozen diners and old Italian waiters in white jackets and black bow ties all holding pizza slices high in the air like lighters at a concert, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s034",
+   "section": "VI. Chorus 2",
+   "b0": 126,
+   "b1": 130,
+   "t0": 77.564,
+   "t1": 80.013,
+   "lines": [
+    33
+   ],
+   "lyric": "No me vengas con complejos",
+   "how": "M",
+   "picture": "She dunks his calculator in the marinara like a biscuit.",
+   "type": "stamp: RECHAZADO",
+   "gfx": "the calculator's digits glitch",
+   "plates": [
+    {
+     "name": "calc-dunk",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, grinning at the lens as she lowers a pocket calculator into a bowl of marinara sauce, holding it between her thumb and one finger like a biscuit, her other hand flat on the table, nobody else in the frame, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s035",
+   "section": "VI. Chorus 2",
+   "b0": 130,
+   "b1": 134,
+   "t0": 80.013,
+   "t1": 82.461,
+   "lines": [
+    34
+   ],
+   "lyric": "Tú contando calorías",
+   "how": "F",
+   "picture": "The calculator sinks in the sauce, still counting.",
+   "type": "seven-segment digits, drowning",
+   "gfx": "kcal numbers float up as bubbles and pop",
+   "plates": [
+    {
+     "name": "calc-sauce",
+     "prompt": "macro photograph of a pocket calculator half sunk in a bowl of thick red marinara sauce, bubbles rising around it, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s036",
+   "section": "VI. Chorus 2",
+   "b0": 134,
+   "b1": 138,
+   "t0": 82.461,
+   "t1": 84.91,
+   "lines": [
+    35
+   ],
+   "lyric": "Yo contando pepperonis",
+   "how": "M",
+   "picture": "She pins pepperoni on his polo like medals.",
+   "type": "counter",
+   "gfx": "each medal gets a tracking box and a number",
+   "plates": [
+    {
+     "name": "medals",
+     "prompt": "medium shot of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair sitting frozen and stiff while a woman's hands with glossy black nails press slices of pepperoni onto the chest of his polo shirt in a neat row like military medals, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s037",
+   "section": "VII. Verse 2",
+   "b0": 138,
+   "b1": 142,
+   "t0": 84.91,
+   "t1": 87.359,
+   "lines": [
+    36
+   ],
+   "lyric": "Me gusta bien caliente",
+   "how": "F",
+   "picture": "A pizza slides out of the fire.",
+   "type": "perfume-advert italic serif",
+   "gfx": "a rating card opens the section: CLASIFICACIÓN G — GASTRONÓMICO",
+   "plates": [
+    {
+     "name": "oven-out",
+     "prompt": "a bubbling pizza sliding out of a blazing wood-fired oven on a long wooden peel, flames behind it, steam rising, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s038",
+   "section": "VII. Verse 2",
+   "b0": 142,
+   "b1": 146,
+   "t0": 87.359,
+   "t1": 89.808,
+   "lines": [
+    37
+   ],
+   "lyric": "Y que se abra poco a poco",
+   "how": "F",
+   "picture": "A pizza box opens by itself. Gold light and steam.",
+   "type": "serif, letter by letter",
+   "gfx": "the type opens with the lid",
+   "plates": [
+    {
+     "name": "box-open",
+     "prompt": "a white pizza box on a table in a dark room opening slowly by itself, golden light and steam pouring out of the gap, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s039",
+   "section": "VII. Verse 2",
+   "b0": 146,
+   "b1": 150,
+   "t0": 89.808,
+   "t1": 92.257,
+   "lines": [
+    38
+   ],
+   "lyric": "La prefiero con buen borde",
+   "how": "F",
+   "picture": "Her fingertip traces the blistered crust.",
+   "type": "serif along the curve of the crust",
+   "gfx": "type on a path",
+   "plates": [
+    {
+     "name": "crust-edge",
+     "prompt": "extreme macro of a blistered, charred, puffy pizza crust edge, a woman's fingertip with a glossy black nail tracing along it, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s040",
+   "section": "VII. Verse 2",
+   "b0": 150,
+   "b1": 154,
+   "t0": 92.257,
+   "t1": 94.706,
+   "lines": [
+    39
+   ],
+   "lyric": "Y con el centro bien jugoso",
+   "how": "S",
+   "picture": "The glossy centre of the pie.",
+   "type": "serif, centred",
+   "gfx": "slow push in",
+   "plates": [
+    {
+     "name": "center-juicy",
+     "prompt": "extreme macro of the centre of a pizza, a pool of glossy tomato sauce and melted mozzarella with beads of olive oil, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s041",
+   "section": "VII. Verse 2",
+   "b0": 154,
+   "b1": 158,
+   "t0": 94.706,
+   "t1": 97.155,
+   "lines": [
+    40
+   ],
+   "lyric": "Si la masa viene gruesa",
+   "how": "F",
+   "picture": "Big floury hands press into thick dough.",
+   "type": "serif",
+   "gfx": "flour puffs on the kicks",
+   "plates": [
+    {
+     "name": "dough-thick",
+     "prompt": "close-up of a pizzaiolo's big floury hands pressing deep into a thick ball of pizza dough on a marble counter, a puff of flour in the air, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s042",
+   "section": "VII. Verse 2",
+   "b0": 158,
+   "b1": 162,
+   "t0": 97.155,
+   "t1": 99.604,
+   "lines": [
+    41
+   ],
+   "lyric": "La trabajo sin parar",
+   "how": "M",
+   "picture": "She kneads hard, on the beat, flour on her patent top.",
+   "type": "serif, shaking with each push",
+   "gfx": "the type jolts on every kick",
+   "plates": [
+    {
+     "name": "her-knead",
+     "prompt": "medium shot of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, kneading pizza dough hard on a floury marble counter in a restaurant kitchen, flour on her arms and on her black patent top, focused, biting her lip, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s043",
+   "section": "VII. Verse 2",
+   "b0": 162,
+   "b1": 165,
+   "t0": 99.604,
+   "t1": 101.441,
+   "lines": [
+    42
+   ],
+   "lyric": "Cuando estira mozzarella",
+   "how": "F",
+   "picture": "The pull: a curtain of mozzarella.",
+   "type": "the word mozzarella stretches with the cheese",
+   "gfx": "letters elongate",
+   "plates": [
+    {
+     "name": "cheese-pull",
+     "prompt": "extreme macro of a pizza slice being lifted from the pie, a thick curtain of melted mozzarella stretching in long strands, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s044",
+   "section": "VII. Verse 2",
+   "b0": 165,
+   "b1": 169,
+   "t0": 101.441,
+   "t1": 103.89,
+   "lines": [
+    43
+   ],
+   "lyric": "La voy jalando sin soltar",
+   "how": "M",
+   "picture": "She walks backwards across the room pulling one endless rope of cheese.",
+   "type": "the line hangs on the cheese rope like washing",
+   "gfx": "type on a path along the rope",
+   "plates": [
+    {
+     "name": "rope-walk",
+     "prompt": "wide shot of the woman from the reference images, the same face, tan skin, jet-black hair pulled back in a messy bun with her face clear of hair, winged eyeliner, coral lips, a black patent-leather halter top and choker, loose grey trousers, leaning back like a tug-of-war player with both hands gripping one thick, impossibly long rope of melted mozzarella in front of her chest, hauling it from a pizza on a far table, the cheese stretched tight across the whole frame, laughing, her arms bent naturally, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-07"
+    }
+   ]
+  },
+  {
+   "id": "s045",
+   "section": "VII. Verse 2",
+   "b0": 169,
+   "b1": 171,
+   "t0": 103.89,
+   "t1": 105.114,
+   "lines": [
+    44
+   ],
+   "lyric": "Dámela grande y redonda",
+   "how": "S",
+   "picture": "Two waiters carry a pizza the size of a table.",
+   "type": "condensed caps",
+   "gfx": "fast cuts from here: one shot per line",
+   "plates": [
+    {
+     "name": "giant-pizza",
+     "prompt": "wide-angle shot of two old Italian waiters in white jackets and black bow ties carrying an enormous round pizza the size of a table between the booths, straining, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s046",
+   "section": "VII. Verse 2",
+   "b0": 171,
+   "b1": 173,
+   "t0": 105.114,
+   "t1": 106.339,
+   "lines": [
+    45
+   ],
+   "lyric": "Con los bordes bien rellenos",
+   "how": "F",
+   "picture": "A stuffed crust torn open, cheese oozing.",
+   "type": "condensed caps",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "stuffed-crust",
+     "prompt": "extreme macro of two hands tearing a stuffed pizza crust apart, melted cheese oozing out of the crust, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s047",
+   "section": "VII. Verse 2",
+   "b0": 173,
+   "b1": 175,
+   "t0": 106.339,
+   "t1": 107.563,
+   "lines": [
+    46
+   ],
+   "lyric": "Si no cabe en una mano",
+   "how": "S",
+   "picture": "A slice far too big droops over one hand.",
+   "type": "condensed caps",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "one-hand",
+     "prompt": "close-up of a huge floppy pizza slice drooping over the edges of one open hand with glossy black nails, far too big to hold, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s048",
+   "section": "VII. Verse 2",
+   "b0": 175,
+   "b1": 177.5,
+   "t0": 107.563,
+   "t1": 109.094,
+   "lines": [
+    47
+   ],
+   "lyric": "Uso las dos para agarrarla",
+   "how": "S",
+   "picture": "Two hands grab it.",
+   "type": "condensed caps",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "two-hands",
+     "prompt": "close-up of two hands with glossy black nails gripping an enormous pizza slice and lifting it toward the lens, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s049",
+   "section": "VII. Verse 2",
+   "b0": 177.5,
+   "b1": 180,
+   "t0": 109.094,
+   "t1": 110.625,
+   "lines": [
+    48
+   ],
+   "lyric": "Si me chorrea por los dedos",
+   "how": "F",
+   "picture": "Sauce and cheese run down her fingers.",
+   "type": "condensed caps",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "drip-fingers",
+     "prompt": "extreme macro of tomato sauce and melted cheese dripping down a woman's fingers with glossy black nails, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s050",
+   "section": "VII. Verse 2",
+   "b0": 180,
+   "b1": 182,
+   "t0": 110.625,
+   "t1": 111.849,
+   "lines": [
+    49
+   ],
+   "lyric": "La acerco más a la boca",
+   "how": "S",
+   "picture": "The slice's point of view: her open mouth arrives.",
+   "type": "condensed caps",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "slice-pov",
+     "prompt": "extreme close-up from the point of view of a pizza slice: the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top with her mouth wide open coming straight at the lens, the tip of the slice in the foreground, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s051",
+   "section": "VII. Verse 2",
+   "b0": 182,
+   "b1": 184,
+   "t0": 111.849,
+   "t1": 113.074,
+   "lines": [
+    50
+   ],
+   "lyric": "Y si queda para luego",
+   "how": "S",
+   "picture": "Leftovers in the fridge light.",
+   "type": "condensed caps",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "fridge-box",
+     "prompt": "a white pizza box with two leftover slices alone on the shelf of an open refrigerator, lit by the cold fridge light in a dark kitchen, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s052",
+   "section": "VII. Verse 2",
+   "b0": 184,
+   "b1": 188,
+   "t0": 113.074,
+   "t1": 115.523,
+   "lines": [
+    51
+   ],
+   "lyric": "La caliento y repetimos",
+   "how": "S",
+   "picture": "She reheats a slice and winks.",
+   "type": "REPETIMOS with a loop arrow",
+   "gfx": "the arrow spins once per beat",
+   "plates": [
+    {
+     "name": "reheat-wink",
+     "prompt": "medium close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top in a dark kitchen lit by the orange glow of an oven, holding a reheated pizza slice on a plate, winking at the lens, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s053",
+   "section": "VII. Verse 2",
+   "b0": 188,
+   "b1": 192,
+   "t0": 115.523,
+   "t1": 117.971,
+   "lines": [
+    52
+   ],
+   "lyric": "(È osceno? No, è gastronomico)",
+   "how": "M",
+   "picture": "The grandmother clutches her chest. The waiter covers his eyes and peeks.",
+   "type": "film subtitle",
+   "gfx": "a censor bar reading OSCENO is restamped GASTRONOMICO",
+   "plates": [
+    {
+     "name": "scandal",
+     "prompt": "medium shot of a tiny Italian grandmother in a black dress and pearls clutching her chest in shock beside an old Italian waiter in a white jacket and black bow tie who covers his eyes with one hand but peeks through his fingers, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s054",
+   "section": "VII. Verse 2",
+   "b0": 192,
+   "b1": 196,
+   "t0": 117.971,
+   "t1": 120.42,
+   "lines": [
+    53
+   ],
+   "lyric": "(Che vergogna… dammene due)",
+   "how": "M",
+   "picture": "She fans herself, then holds up two fingers.",
+   "type": "film subtitle",
+   "gfx": "order ticket: 2 ×",
+   "plates": [
+    {
+     "name": "two-more",
+     "prompt": "close-up of a tiny Italian grandmother in a black dress and pearls fanning herself with a napkin and holding up two fingers to order, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s055",
+   "section": "VIII. Bridge",
+   "b0": 196,
+   "b1": 199,
+   "t0": 120.42,
+   "t1": 122.257,
+   "lines": [
+    54
+   ],
+   "lyric": "Ay, ay, ay",
+   "how": "M",
+   "picture": "Telenovela despair: hand to forehead, one tear, wind machine.",
+   "type": "soap-opera title script",
+   "gfx": "three crash zooms, one per ‘ay’",
+   "plates": [
+    {
+     "name": "novela-her",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, the back of her hand pressed to her forehead in despair, eyes to heaven, a single tear on her cheek, telenovela close-up, soft-focus glow, starburst highlights, hair blown by a wind machine, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s056",
+   "section": "VIII. Bridge",
+   "b0": 199,
+   "b1": 203,
+   "t0": 122.257,
+   "t1": 124.706,
+   "lines": [
+    55
+   ],
+   "lyric": "Qué tragedia nacional",
+   "how": "S",
+   "picture": "The couple frozen like a news photo: she guards the pizza, he points.",
+   "type": "BREAKING NEWS banner: ÚLTIMA HORA",
+   "gfx": "a news frame, ticker and clock wrap the picture",
+   "plates": [
+    {
+     "name": "tragedy-wide",
+     "prompt": "wide shot of a couple frozen at their table like a news photograph: the woman from the first two reference images, the same face, tan skin, jet-black hair in a messy bun with loose strands, winged eyeliner, coral lips, a black patent-leather halter top and choker clutches a whole pizza to her chest protectively, the man from the third reference image, the same face, slim and clean-shaven in a pale blue polo shirt with neat side-parted brown hair points at it accusingly, old Italian waiters in white jackets and black bow ties gasping behind them, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url> <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s057",
+   "section": "VIII. Bridge",
+   "b0": 203,
+   "b1": 206.5,
+   "t0": 124.706,
+   "t1": 126.849,
+   "lines": [
+    56
+   ],
+   "lyric": "Mi novio quiere una modelo",
+   "how": "S",
+   "picture": "Cut away: a skinny fashion model struts down a runway.",
+   "type": "news lower third",
+   "gfx": "his cold blue HUD scores her: 9.8",
+   "plates": [
+    {
+     "name": "runway",
+     "prompt": "full-length shot of a very thin fashion model with slicked-back blonde hair in a pale grey couture dress strutting down a white runway straight toward the lens, a blank bored expression, rows of photographers' flashes in the dark behind her, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s058",
+   "section": "VIII. Bridge",
+   "b0": 206.5,
+   "b1": 212,
+   "t0": 126.849,
+   "t1": 130.216,
+   "lines": [
+    57
+   ],
+   "lyric": "Yo quiero salsa adicional",
+   "how": "M",
+   "picture": "She gets what she asked for: a cascade of marinara pours over her from above, and she loves it.",
+   "type": "order line: + salsa adicional",
+   "gfx": "the falling sauce wipes the line on",
+   "plates": [
+    {
+     "name": "salsa-douse",
+     "prompt": "medium shot of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, eyes closed and laughing with her arms open as a thick cascade of red tomato marinara sauce pours down over her head and shoulders from above, sauce splashing on the white tablecloth, nobody else in the frame, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s059",
+   "section": "VIII. Bridge",
+   "b0": 212,
+   "b1": 215,
+   "t0": 130.216,
+   "t1": 132.053,
+   "lines": [
+    58
+   ],
+   "lyric": "Ay, ay, ay",
+   "how": "S",
+   "picture": "Three gasps, one per ‘ay’: him, the waiter, the grandmother.",
+   "type": "soap-opera script, one ‘ay’ each",
+   "gfx": "crash zoom on each face",
+   "plates": [
+    {
+     "name": "gasp-him",
+     "prompt": "close-up of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair gasping, one hand on his cheek, shocked, telenovela close-up, soft-focus glow, starburst highlights, hair blown by a wind machine, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    },
+    {
+     "name": "gasp-waiter",
+     "prompt": "close-up of an old Italian waiter in a white jacket and black bow tie gasping and dropping a silver tray, shocked, telenovela close-up, soft-focus glow, starburst highlights, hair blown by a wind machine, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    },
+    {
+     "name": "gasp-nonna",
+     "prompt": "close-up of a tiny Italian grandmother in a black dress and pearls gasping with both hands on her cheeks, shocked, telenovela close-up, soft-focus glow, starburst highlights, hair blown by a wind machine, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s060",
+   "section": "VIII. Bridge",
+   "b0": 215,
+   "b1": 219.5,
+   "t0": 132.053,
+   "t1": 134.808,
+   "lines": [
+    59
+   ],
+   "lyric": "Qué conflicto tan profundo",
+   "how": "S",
+   "picture": "Stare-down in profile, nose to nose, a crust in her teeth.",
+   "type": "episode title card: CONFLICTO PROFUNDO",
+   "gfx": "‘capítulo 247’",
+   "plates": [
+    {
+     "name": "stare-down",
+     "prompt": "two-shot in profile of a couple nose to nose across a table in a furious stare-down: the woman from the first two reference images, the same face, tan skin, jet-black hair in a messy bun with loose strands, winged eyeliner, coral lips, a black patent-leather halter top and choker on the left with a pizza crust between her teeth, the man from the third reference image, the same face, slim and clean-shaven in a pale blue polo shirt with neat side-parted brown hair on the right, a candle between them, telenovela close-up, soft-focus glow, starburst highlights, hair blown by a wind machine, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url> <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s061",
+   "section": "VIII. Bridge",
+   "b0": 219.5,
+   "b1": 222.5,
+   "t0": 134.808,
+   "t1": 136.645,
+   "lines": [
+    60
+   ],
+   "lyric": "Él cuidando mi figura",
+   "how": "S",
+   "picture": "He squints at her through a measuring tape.",
+   "type": "caption on the tape",
+   "gfx": "a dotted outline labelled FIGURA",
+   "plates": [
+    {
+     "name": "him-tape",
+     "prompt": "medium shot of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair holding a yellow measuring tape stretched between his hands and squinting through it like a surveyor, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s062",
+   "section": "VIII. Bridge",
+   "b0": 222.5,
+   "b1": 228,
+   "t0": 136.645,
+   "t1": 140.012,
+   "lines": [
+    61
+   ],
+   "lyric": "Yo comiéndome medio mundo",
+   "how": "M",
+   "picture": "She bites a pizza made to look like the globe.",
+   "type": "counter: MUNDO 50%",
+   "gfx": "a bite-shaped hole in a world map",
+   "plates": [
+    {
+     "name": "globe-pizza",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, taking a giant bite out of a round pizza decorated like a globe of the earth with green pesto continents on white cheese oceans, eyes wide, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s063",
+   "section": "VIII. Bridge",
+   "b0": 228,
+   "b1": 232,
+   "t0": 140.012,
+   "t1": 142.461,
+   "lines": [
+    62
+   ],
+   "lyric": "Me dijo: “piensa en el verano”",
+   "how": "S",
+   "picture": "He holds up a beach postcard, hopeful.",
+   "type": "speech quote, his colour",
+   "gfx": "a tiny sun rises behind the quote",
+   "plates": [
+    {
+     "name": "summer",
+     "prompt": "medium shot of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair holding up a small beach postcard and pointing at it hopefully, sunglasses pushed up on his head, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s064",
+   "section": "VIII. Bridge",
+   "b0": 232,
+   "b1": 236,
+   "t0": 142.461,
+   "t1": 144.91,
+   "lines": [
+    63
+   ],
+   "lyric": "Le dije: “piensa en sobrevivir”",
+   "how": "M",
+   "picture": "Her, deadpan, cheeks stuffed, a slice in each hand.",
+   "type": "speech quote, her colour",
+   "gfx": "survival-kit icons",
+   "plates": [
+    {
+     "name": "survive",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, deadpan, cheeks stuffed with pizza like a hamster, staring straight into the lens, a pizza slice in each hand, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s065",
+   "section": "VIII. Bridge",
+   "b0": 236,
+   "b1": 240.5,
+   "t0": 144.91,
+   "t1": 147.665,
+   "lines": [
+    64
+   ],
+   "lyric": "Porque si tocas mi rebanada",
+   "how": "S",
+   "picture": "His hand creeps toward her last slice. She pulls a gun on him, deadpan, still chewing.",
+   "type": "warning tape type",
+   "gfx": "freeze frame on the kick; a crash zoom on his hand",
+   "plates": [
+    {
+     "name": "standoff-gun",
+     "prompt": "medium two-shot at a restaurant table: the man from the third reference image, the same face, slim and clean-shaven in a pale blue polo shirt with neat side-parted brown hair freezes with his hand hovering over the last pizza slice on a plate, staring wide-eyed across the table at the woman from the first two reference images, the same face, tan skin, jet-black hair in a messy bun with loose strands, winged eyeliner, coral lips, a black patent-leather halter top and choker, who points a small silver revolver at him with one hand, deadpan, chewing, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url> <reference-image-url>",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s066",
+   "section": "VIII. Bridge",
+   "b0": 240.5,
+   "b1": 248,
+   "t0": 147.665,
+   "t1": 152.257,
+   "lines": [
+    65
+   ],
+   "lyric": "Esta relación termina aquí",
+   "how": "L",
+   "picture": "She sings it dead serious, fork pointed at the lens. In the silence he leaves; the salad stays.",
+   "type": "legal small print, then a status toggle",
+   "gfx": "‘En una relación’ flips to ‘Soltera, con pizza’",
+   "plates": [
+    {
+     "name": "ultimatum",
+     "prompt": "medium close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, dead serious, leaning over the table pointing a fork straight at the lens, guarding a pizza slice with her other arm, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    },
+    {
+     "name": "he-leaves",
+     "prompt": "wide shot of the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair walking out of the trattoria's front door into the night, seen from behind, a small green salad left on the empty table in the foreground, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s067",
+   "section": "IX. Chorus 3",
+   "b0": 248,
+   "b1": 251,
+   "t0": 152.257,
+   "t1": 154.094,
+   "lines": [
+    66
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "M",
+   "picture": "Alone in the big round booth, arms spread like a queen, four pizzas.",
+   "type": "the label, gold",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "queen-booth",
+     "prompt": "wide symmetrical shot of the woman from the reference images, the same face, tan skin, jet-black hair pulled back in a messy bun with her face clear of hair, winged eyeliner, coral lips, a black patent-leather halter top and choker, loose grey trousers, lounging alone in the middle of a big round red leather booth with her arms spread along the backrest like a queen, four whole pizzas on the table in front of her, singing, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s068",
+   "section": "IX. Chorus 3",
+   "b0": 251,
+   "b1": 256,
+   "t0": 154.094,
+   "t1": 157.155,
+   "lines": [
+    67
+   ],
+   "lyric": "No es culpa, es progreso",
+   "how": "M",
+   "picture": "Four waiters carry her through the room on a giant pizza peel.",
+   "type": "PROGRESO bar at 100%",
+   "gfx": "confetti of basil leaves",
+   "plates": [
+    {
+     "name": "peel-carry",
+     "prompt": "wide shot of four old Italian waiters in white jackets and black bow ties carrying the woman from the reference images, the same face, tan skin, jet-black hair pulled back in a messy bun with her face clear of hair, winged eyeliner, coral lips, a black patent-leather halter top and choker, loose grey trousers through the dining room on a giant wooden pizza peel on their shoulders like a queen on a litter, she waves a pizza slice, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s069",
+   "section": "IX. Chorus 3",
+   "b0": 256,
+   "b1": 259,
+   "t0": 157.155,
+   "t1": 158.992,
+   "lines": [
+    68
+   ],
+   "lyric": "Mira cómo me lo como",
+   "how": "S",
+   "picture": "Three more bites, one per beat.",
+   "type": "one word per bite",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "bite-e",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, biting two stacked pizza slices at once, eyes crossed, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    },
+    {
+     "name": "bite-f",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, a pizza slice hanging from her mouth with no hands, both hands making peace signs, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    },
+    {
+     "name": "bite-g",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, licking melted cheese off the back of her hand, a slice in the other hand, grinning, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s070",
+   "section": "IX. Chorus 3",
+   "b0": 259,
+   "b1": 264,
+   "t0": 158.992,
+   "t1": 162.053,
+   "lines": [
+    69
+   ],
+   "lyric": "Y te mando un beso",
+   "how": "M",
+   "picture": "The kiss again, closer, sauce on her nose.",
+   "type": "napkin handwriting",
+   "gfx": "a second kiss print beside the first",
+   "plates": [
+    {
+     "name": "kiss-2",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, eyes closed, lips puckered into a big kiss aimed straight at the lens, a small smear of tomato sauce at the corner of her mouth, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-04"
+    }
+   ]
+  },
+  {
+   "id": "s071",
+   "section": "IX. Chorus 3",
+   "b0": 264,
+   "b1": 267,
+   "t0": 162.053,
+   "t1": 163.89,
+   "lines": [
+    70
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "S",
+   "picture": "A product shot: her and the slice, commercial smile.",
+   "type": "the label with her as the brand",
+   "gfx": "‘Porción: toda’",
+   "plates": [
+    {
+     "name": "label-face",
+     "prompt": "centred beauty portrait of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, holding a pizza slice beside her cheek like a product in an advertisement, a bright commercial smile, a plain cream studio backdrop, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s072",
+   "section": "IX. Chorus 3",
+   "b0": 267,
+   "b1": 271,
+   "t0": 163.89,
+   "t1": 166.339,
+   "lines": [
+    71
+   ],
+   "lyric": "No me vengas con complejos",
+   "how": "M",
+   "picture": "She tears a measuring tape in half with her teeth.",
+   "type": "stamp: RECHAZADO",
+   "gfx": "the tape's numbers scatter",
+   "plates": [
+    {
+     "name": "tape-tear",
+     "prompt": "medium close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, tearing a yellow measuring tape in half with both hands and her teeth, fierce and laughing, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s073",
+   "section": "IX. Chorus 3",
+   "b0": 271,
+   "b1": 275,
+   "t0": 166.339,
+   "t1": 168.787,
+   "lines": [
+    72
+   ],
+   "lyric": "Tú contando calorías",
+   "how": "S",
+   "picture": "His calculator, abandoned beside the salad and an empty chair.",
+   "type": "seven-segment: ERROR",
+   "gfx": "the kcal HUD flickers out",
+   "plates": [
+    {
+     "name": "calc-alone",
+     "prompt": "close-up of a black pocket calculator abandoned on a white tablecloth beside a half-eaten green salad and a glass of water, an empty red leather booth seat behind it, nobody in the frame, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-08"
+    }
+   ]
+  },
+  {
+   "id": "s074",
+   "section": "IX. Chorus 3",
+   "b0": 275,
+   "b1": 281,
+   "t0": 168.787,
+   "t1": 172.461,
+   "lines": [
+    73
+   ],
+   "lyric": "Yo contando pepperonis",
+   "how": "M",
+   "picture": "Pepperoni rains on her like confetti.",
+   "type": "counter spins to 9,999",
+   "gfx": "every falling slice gets a tracking box",
+   "plates": [
+    {
+     "name": "pepperoni-rain",
+     "prompt": "medium shot of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, arms open and face turned up, laughing as slices of pepperoni rain down on her like confetti in the dining room, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s075",
+   "section": "X. Breakdown",
+   "b0": 281,
+   "b1": 283,
+   "t0": 172.461,
+   "t1": 173.685,
+   "lines": [
+    74
+   ],
+   "lyric": "No me midas",
+   "how": "S",
+   "picture": "The measuring tape, served as pasta: coiled on a plate under tomato sauce and basil, a fork twirled into it.",
+   "type": "full-frame caps, white on red",
+   "gfx": "hard cut and flash on the kick",
+   "plates": [
+    {
+     "name": "tape-pasta",
+     "prompt": "top-down close-up of a yellow fabric measuring tape coiled on a white plate like a nest of tagliatelle, tomato sauce and one basil leaf on top, a dusting of grated parmesan, a fork twirled into the coil lifting a few loops of tape, a white tablecloth, a red glass candle holder at the edge, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-10"
+    }
+   ]
+  },
+  {
+   "id": "s076",
+   "section": "X. Breakdown",
+   "b0": 283,
+   "b1": 285,
+   "t0": 173.685,
+   "t1": 174.91,
+   "lines": [
+    75
+   ],
+   "lyric": "No me peses",
+   "how": "S",
+   "picture": "She drops the bathroom scale in the bin, held between two fingertips.",
+   "type": "full-frame caps",
+   "gfx": "the lid clangs on the kick",
+   "plates": [
+    {
+     "name": "scale-bin",
+     "prompt": "medium shot of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, holding a bathroom scale at arm's length between two fingertips like something disgusting, nose wrinkled, dropping it into a steel kitchen bin beside the table, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s077",
+   "section": "X. Breakdown",
+   "b0": 285,
+   "b1": 289,
+   "t0": 174.91,
+   "t1": 177.359,
+   "lines": [
+    76
+   ],
+   "lyric": "No me escondas los aderezos",
+   "how": "S",
+   "picture": "His briefcase, full of hidden parmesan and chili. Her hand takes one.",
+   "type": "full-frame caps",
+   "gfx": "evidence tags on each shaker",
+   "plates": [
+    {
+     "name": "condiments",
+     "prompt": "close-up of a man's brown leather briefcase lying open on a restaurant table, packed with hidden glass shakers of grated parmesan, chili flakes and oregano with plain metal lids and no labels, one bare tan woman's hand with glossy black nails reaching in from the right and snatching a shaker, nobody else in the frame, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-08"
+    }
+   ]
+  },
+  {
+   "id": "s078",
+   "section": "X. Breakdown",
+   "b0": 289,
+   "b1": 291,
+   "t0": 177.359,
+   "t1": 178.583,
+   "lines": [
+    77
+   ],
+   "lyric": "No me juzgues",
+   "how": "S",
+   "picture": "A pepper mill comes down like a gavel.",
+   "type": "full-frame caps",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "gavel",
+     "prompt": "close-up of a woman's fist with glossy black nails gripping a tall wooden pepper mill and slamming its base down on a white tablecloth like a judge's gavel, peppercorns jumping, motion blur, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-05"
+    }
+   ]
+  },
+  {
+   "id": "s079",
+   "section": "X. Breakdown",
+   "b0": 291,
+   "b1": 293,
+   "t0": 178.583,
+   "t1": 179.808,
+   "lines": [
+    78
+   ],
+   "lyric": "No me estreses",
+   "how": "S",
+   "picture": "Spa: a pepperoni slice over each eye.",
+   "type": "full-frame caps",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "spa",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top leaning back in the booth with a slice of pepperoni over each eye like a spa treatment, a blissful smile, hands folded, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s080",
+   "section": "X. Breakdown",
+   "b0": 293,
+   "b1": 300,
+   "t0": 179.808,
+   "t1": 184.094,
+   "lines": [
+    79
+   ],
+   "lyric": "Pásame los cuatro quesos",
+   "how": "F",
+   "picture": "Four waiters' hands pass four cheeses.",
+   "type": "four-up grid, one cheese per cell",
+   "gfx": "in the stop the four cells spin like a slot machine",
+   "plates": [
+    {
+     "name": "four-cheeses",
+     "prompt": "top-down photograph of four white plates in a square on a white tablecloth: a ball of mozzarella, a wedge of parmesan, a wedge of blue-veined gorgonzola and a round of provolone, four waiters' hands in white sleeves reaching in from the four corners, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s081",
+   "section": "XI. Final chorus",
+   "b0": 300,
+   "b1": 303,
+   "t0": 184.094,
+   "t1": 185.93,
+   "lines": [
+    80
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "L",
+   "picture": "Nuestra Señora del Queso: she appears as the Virgin of Guadalupe, in a tablecloth mantle with gold stars, a pizza for a halo and breadsticks for rays.",
+   "type": "the label as an altarpiece, gold leaf",
+   "gfx": "rays pulse on the kicks; gold stars; roses of pepperoni",
+   "plates": [
+    {
+     "name": "guadalupe",
+     "prompt": "devotional portrait in the style of the Virgin of Guadalupe, staged as a fashion photograph, waist up: the woman from the reference images, the same face, tan skin, winged eyeliner, coral lips, jet-black hair pulled back off her face, her hands pressed together in prayer at her chest, head gently tilted and eyes lowered, a mantle made of a red-and-white checkered tablecloth scattered with gold stars draped over her head and shoulders, a whole pepperoni pizza glowing behind her head like a halo, golden breadsticks radiating all around her like rays of light, red roses and lit candles below, a dark red backdrop, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-10"
+    },
+    {
+     "name": "halo",
+     "prompt": "centred portrait of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, gazing down at the lens like a Renaissance saint, a whole pepperoni pizza glowing behind her head like a golden halo, hands open at her sides, candles all around, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s082",
+   "section": "XI. Final chorus",
+   "b0": 303,
+   "b1": 308,
+   "t0": 185.93,
+   "t1": 188.991,
+   "lines": [
+    81
+   ],
+   "lyric": "No es culpa, es progreso",
+   "how": "M",
+   "picture": "A conga line through the booths, her at the front.",
+   "type": "PROGRESO, everyone at 100%",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "conga",
+     "prompt": "wide shot of a conga line dancing between the booths: the woman from the reference images, the same face, tan skin, jet-black hair pulled back in a messy bun with her face clear of hair, winged eyeliner, coral lips, a black patent-leather halter top and choker, loose grey trousers at the front holding a pizza high, followed by old Italian waiters in white jackets and black bow ties, a tiny grandmother in pearls and a pizzaiolo in an apron, everyone laughing, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s083",
+   "section": "XI. Final chorus",
+   "b0": 308,
+   "b1": 311,
+   "t0": 188.991,
+   "t1": 190.828,
+   "lines": [
+    82
+   ],
+   "lyric": "Mira cómo me lo como",
+   "how": "S",
+   "picture": "Three more bites, one per beat.",
+   "type": "one word per bite",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "bite-h",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top and an old Italian waiter in a white jacket and black bow tie sharing one long string of melted cheese, each biting one end, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    },
+    {
+     "name": "bite-k",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, a pizza slice in each hand, biting one while the other waits at her cheek, cheeks bulging, eyes wide and delighted, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-05"
+    },
+    {
+     "name": "bite-l",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, eyes squeezed shut with joy, biting a pizza slice folded in half like a taco, melted cheese stretching, tomato sauce on her chin, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-06"
+    }
+   ]
+  },
+  {
+   "id": "s084",
+   "section": "XI. Final chorus",
+   "b0": 311,
+   "b1": 316,
+   "t0": 190.828,
+   "t1": 193.889,
+   "lines": [
+    83
+   ],
+   "lyric": "Y te mando un beso",
+   "how": "M",
+   "picture": "Kisses with both hands, laughing.",
+   "type": "napkin handwriting",
+   "gfx": "kiss prints multiply across the frame, one per beat",
+   "plates": [
+    {
+     "name": "kiss-4",
+     "have": "plates-12/kiss-4a"
+    }
+   ]
+  },
+  {
+   "id": "s085",
+   "section": "XI. Final chorus",
+   "b0": 316,
+   "b1": 319,
+   "t0": 193.889,
+   "t1": 195.726,
+   "lines": [
+    84
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "S",
+   "picture": "The full apparition: she stands in a mandorla of breadsticks on a crescent of pizza crust, a tiny waiter at her feet.",
+   "type": "a prayer card: the label set in gold along the card's border",
+   "gfx": "gold leaf border; rays pulse on the kicks",
+   "plates": [
+    {
+     "name": "apparition",
+     "prompt": "full-length devotional image in the style of the Virgin of Guadalupe, staged as a fashion photograph: the woman from the reference images, the same face, tan skin, winged eyeliner, coral lips, jet-black hair pulled back off her face, standing with her hands pressed together in prayer and her eyes lowered, a long mantle made of a red-and-white checkered tablecloth scattered with gold stars over her head and shoulders, surrounded head to toe by golden breadsticks radiating like rays of light, standing on a crescent of pizza crust held up by a small old waiter in a white jacket and bow tie, red roses at her feet, a dark red backdrop, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-10"
+    }
+   ]
+  },
+  {
+   "id": "s086",
+   "section": "XI. Final chorus",
+   "b0": 319,
+   "b1": 323,
+   "t0": 195.726,
+   "t1": 198.175,
+   "lines": [
+    85
+   ],
+   "lyric": "No me vengas con complejos",
+   "how": "M",
+   "picture": "She pushes out the front door with a tower of pizza boxes and looks back.",
+   "type": "stamped on the top box",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "exit-boxes",
+     "prompt": "full-length shot from behind of the woman from the reference images, the same face, tan skin, jet-black hair pulled back in a messy bun with her face clear of hair, winged eyeliner, coral lips, a black patent-leather halter top and choker, loose grey trousers, pushing out through the trattoria's front door into the night street carrying a tall stack of white pizza boxes, glancing back over her shoulder with a grin, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s087",
+   "section": "XI. Final chorus",
+   "b0": 323,
+   "b1": 327,
+   "t0": 198.175,
+   "t1": 200.624,
+   "lines": [
+    86
+   ],
+   "lyric": "Tú contando calorías",
+   "how": "S",
+   "picture": "Him outside in the rain, face against the window.",
+   "type": "seven-segment, dim",
+   "gfx": "his HUD: 0 kcal, 0 todo",
+   "plates": [
+    {
+     "name": "him-window",
+     "prompt": "night exterior in the rain: the man from the reference image, the same face, a slim clean-shaven man in his late twenties in a pale blue polo shirt with neat side-parted brown hair standing alone outside a restaurant pressing his face and one hand against the window, looking in at the warm light inside, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url>",
+     "batch": "plates-02"
+    }
+   ]
+  },
+  {
+   "id": "s088",
+   "section": "XI. Final chorus",
+   "b0": 327,
+   "b1": 333,
+   "t0": 200.624,
+   "t1": 204.297,
+   "lines": [
+    87
+   ],
+   "lyric": "Yo contando pepperonis",
+   "how": "M",
+   "picture": "She rides off on a red scooter with the boxes strapped behind her.",
+   "type": "counter, still climbing",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "scooter",
+     "prompt": "wide night street shot of the woman from the reference images, the same face, tan skin, jet-black hair pulled back in a messy bun with her face clear of hair, winged eyeliner, coral lips, a black patent-leather halter top and choker, loose grey trousers, riding away on a red vintage scooter with a tall stack of white pizza boxes strapped behind her, a pizza slice in one hand, hair flying, wet cobblestones, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s089",
+   "section": "XII. Outro",
+   "b0": 333,
+   "b1": 337,
+   "t0": 204.297,
+   "t1": 206.746,
+   "lines": [
+    88
+   ],
+   "lyric": "No me mires",
+   "how": "M",
+   "picture": "The empty trattoria, chairs up. She reaches out and covers the lens.",
+   "type": "small, centred, on black as her hand closes the frame",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "after-hours",
+     "prompt": "wide shot of the empty trattoria after closing, chairs upside down on the tables, one light on: the woman from the reference images, the same face, tan skin, jet-black hair pulled back in a messy bun with her face clear of hair, winged eyeliner, coral lips, a black patent-leather halter top and choker, loose grey trousers alone in a red leather booth with one last pizza, reaching a hand out toward the lens, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s090",
+   "section": "XII. Outro",
+   "b0": 337,
+   "b1": 341,
+   "t0": 206.746,
+   "t1": 209.195,
+   "lines": [
+    89
+   ],
+   "lyric": "No me peses",
+   "how": "S",
+   "picture": "The bathroom scale sticks out of the bin where she left it, an empty pizza box dropped on top.",
+   "type": "small, centred",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "scale-in-bin",
+     "prompt": "close-up of a steel kitchen bin beside a restaurant table with a white bathroom scale sticking out of it and a greasy empty white pizza box dropped on top of the scale, nobody in the frame, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-09"
+    }
+   ]
+  },
+  {
+   "id": "s091",
+   "section": "XII. Outro",
+   "b0": 341,
+   "b1": 349,
+   "t0": 209.195,
+   "t1": 214.093,
+   "lines": [
+    90
+   ],
+   "lyric": "No me escondas los aderezos",
+   "how": "M",
+   "picture": "Parmesan falls like snow through a beam of light.",
+   "type": "the line falls with the cheese",
+   "gfx": "particles of type",
+   "plates": [
+    {
+     "name": "parm-snow",
+     "prompt": "close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top shaking a parmesan shaker high over a pizza, the grated cheese falling like snow through a beam of light, calm, eyes half closed, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s092",
+   "section": "XII. Outro",
+   "b0": 349,
+   "b1": 360,
+   "t0": 214.093,
+   "t1": 220.828,
+   "lines": [
+    91
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "M",
+   "picture": "The last pull, slow: one rope of mozzarella from her lips to the slice.",
+   "type": "the label assembles one last time: Grasa 0 g, Culpa 0%, Queso 100%",
+   "gfx": "",
+   "plates": [
+    {
+     "name": "last-pull",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, slowly pulling the last pizza slice away from her mouth, one long rope of mozzarella stretching between her lips and the slice, eyes on the lens, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, candid paparazzi snapshot, camera far too close and tilted off-kilter, harsh direct on-camera flash, messy and funny, caught mid-moment, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    }
+   ]
+  },
+  {
+   "id": "s093",
+   "section": "XII. Outro",
+   "b0": 360,
+   "b1": 373.54,
+   "t0": 220.828,
+   "t1": 229.12,
+   "lines": [
+    92
+   ],
+   "lyric": "No es grasa, es queso",
+   "how": "L",
+   "picture": "She whispers it, chin on her hand, then burps and giggles. End card on the plate with one crust.",
+   "type": "title: QUESO, then Saindra",
+   "gfx": "a film subtitle for the burp: (eructo)",
+   "plates": [
+    {
+     "name": "whisper",
+     "prompt": "extreme close-up of the woman from the reference images, the same face, warm tan skin, dark brown eyes, sharp winged eyeliner and glossy coral lips, jet-black hair pulled back off her face in a messy bun, a few loose strands beside her face and none across her eyes or mouth, a black patent-leather choker and a black patent-leather halter top, resting her chin on her hand in the empty trattoria, whispering to the lens with a small satisfied smile, a clean plate with one crust in front of her, in a red-sauce Italian trattoria at night, red leather booth, white tablecloth, red glass candle holder, dark wood panelling, warm tungsten light and direct camera flash, high-fashion editorial photograph, 35mm film still, fine grain, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd --edit <reference-image-url> <reference-image-url>",
+     "batch": "plates-01"
+    },
+    {
+     "name": "end-plate",
+     "prompt": "top-down photograph of an empty white plate holding only one gnawed pizza crust and a few crumbs, a crumpled white napkin beside it on a white tablecloth, a red glass candle holder burned low, macro food photograph, glossy, razor-thin focus, hard direct flash, deep shadows, no text, no letters, no logos --ar 16:9 --v 8.2 --raw --hd",
+     "batch": "plates-04"
+    }
+   ]
+  }
+ ]
+}

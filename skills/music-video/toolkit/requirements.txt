@@ -1,0 +1,25 @@
+# Python packages imported by tools/*.py and engine/render.py, pinned to the versions of the development environment.
+# Python 3.11. mlx-whisper runs on Apple Silicon only.
+
+# light, used by most tools
+numpy==2.4.6           # align, beatgrid, clips, imgedit, matte
+scipy==1.17.1          # beatgrid, clips
+soundfile==0.14.0      # clips
+pillow==12.3.0         # cover, imgedit, matte
+requests==2.34.2       # hfapi, imgedit (inpaint)
+playwright==1.63.0     # engine/render.py; then run `playwright install chromium`
+
+# audio analysis
+librosa==0.11.0        # beatgrid
+
+# heavy
+torch==2.14.1          # align, matte
+torchaudio==2.5.1      # align (MMS_FA forced alignment)
+transformers==5.18.0   # matte (BiRefNet, loaded with trust_remote_code)
+mlx-whisper==0.4.3     # transcribe, and the lips sync check in clips
+
+# Not imported by any file here, but needed at run time:
+# demucs==4.1.0        # `demucs` command line, separates the song into media/audio/stems_raw/htdemucs/song/*.wav for beatgrid, align, transcribe and clips
+# timm==1.0.30         # the BiRefNet model code that matte.py downloads imports timm, einops and kornia
+# einops==0.8.2
+# kornia==0.8.3

@@ -1,0 +1,30 @@
+<!doctype html>
+<!--
+  engine/index.html?project=<dir>[&ch=<prefix,prefix>][&look=<mode>]
+
+  One 1920x1080 canvas. `await ENGINE.render(t)` draws the frame for song time t.
+  Loads src/*.js, then <project>/engine/assets/*.js, common.js and every chapter in the manifest.
+  Opened by render.py in headless Chromium. See ANIMATION_GUIDE.md.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>engine</title>
+<style>
+  html, body { margin: 0; background: #000; overflow: hidden; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="stage" width="1920" height="1080"></canvas>
+<script src="src/math.js"></script>
+<script src="src/core.js"></script>
+<script src="src/time.js"></script>
+<script src="src/media.js"></script>
+<script src="src/type.js"></script>
+<script src="src/lyrics.js"></script>
+<script src="src/look.js"></script>
+<script src="src/host.js"></script>
+<script src="src/boot.js"></script>
+</body>
+</html>

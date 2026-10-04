@@ -1,0 +1,35 @@
+{
+ "duration": 229.12,
+ "bpm": 98.0007,
+ "period": 0.612241,
+ "t0": 0.4212,
+ "bar": 2.448962,
+ "kicks_on_grid": 152,
+ "kicks_found": 234,
+ "residual_ms_iqr": [
+  -3.33,
+  1.44
+ ],
+ "bpm_first_half": 98.00344503093064,
+ "bpm_second_half": 97.99592435320773,
+ "coarse_bpm": 99.38,
+ "key": "A minor (loop Am Am Am G | F F E E, 8 beats)",
+ "drums_enter_beat": 14,
+ "bars": {
+  "note": "The beat grid is uniform. Bars are not: chorus starts are 94, 141 and 52 beats apart, so some bars at the stops are short or long. Where the Am of the loop starts, by section (beat index mod 8), measured by chord-template match:",
+  "loop_phase_mod8": {
+   "chorus 1 (beats 16-47)": 3,
+   "chorus 2 (beats 104-143)": 1,
+   "chorus 3 (beats 248-295)": 6,
+   "final chorus (beats 296-335)": 2
+  },
+  "unverified": [
+   "verse 1",
+   "pre-chorus",
+   "verse 2",
+   "bridge",
+   "breakdown",
+   "outro"
+  ]
+ }
+}
