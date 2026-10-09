@@ -29,6 +29,10 @@ Every command takes --ch 03,07 (load only chapters whose file name starts with o
 --look <mode>. Scenes registered with proof: true, such as the timing proof in ch/00_timing.js, load only
 when their chapter is picked with --ch.
 
+Every command also takes --size WxH (default 1920x1080, or the VIDEO_SIZE environment variable): the canvas
+size, which the engine's W and H follow. --size 1080x1920 renders a vertical cut; a chapter written for that
+frame is picked with --ch as usual. Without --size nothing changes.
+
 Frame i of a range is song time A + i/fps. A:B covers ceil((B-A)*fps) frames. The range is split into chunks
 of 8 s that N cold browsers pull from a queue. `video` encodes one segment per chunk and joins the segments
 without re-encoding.
@@ -47,7 +51,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
 PROJECT = os.environ.get('VIDEO_PROJECT', '').strip('/')
 P = ROOT / PROJECT
-W, H = 1920, 1080
+W, H = 1920, 1080   # the default canvas; main() replaces them when --size or VIDEO_SIZE asks for another
 MIN_PX = 36
 CHUNK_S = 8.0   # seconds of song per work chunk
 BATCH = 12       # frames rendered per call into the page
@@ -271,8 +275,9 @@ def chunk_size(n, fps, workers):
 
 # ---------------------------------------------------------------- ffmpeg
 
-def x264_from_raw(path, fps, w=W):
+def x264_from_raw(path, fps, w=None):
     """ffmpeg reading raw RGBA frames on stdin, writing H.264 CRF 16 yuv420p tagged BT.709."""
+    w = w or W
     vf = (f'scale={w}:-2:flags=lanczos+accurate_rnd+full_chroma_int:in_range=pc:out_range=tv:out_color_matrix=bt709,'
           'format=yuv420p,setparams=range=tv:colorspace=bt709:color_primaries=bt709:color_trc=bt709')
     cmd = ['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgba', '-s', f'{W}x{H}',
@@ -348,7 +353,7 @@ async def cmd_video(pw, url, a, meta):
     async def job(pg, chunk):
         k, ts = chunk
         seg = tmp / f'seg{k:05d}.mp4'
-        proc = x264_from_raw(seg, a.fps, a.w)
+        proc = x264_from_raw(seg, a.fps, a.w or W)
         pg.sink = proc.stdin.write
         try:
             for part in chunked(ts, BATCH):
@@ -400,7 +405,7 @@ async def cmd_lyrics(pw, url, a, meta):
             marks = await pg.ev('([t]) => HOST.marks(t)', mid)
             px = [m['px'] for m in marks if m['li'] == li and m['wi'] == wi]
             if not px: miss.append((mid, li, wi, w, 'no mark'))
-            elif max(px) < MIN_PX: miss.append((mid, li, wi, w, f'{max(px):.1f} px, under {MIN_PX}'))
+            elif max(px) < a.min_px: miss.append((mid, li, wi, w, f'{max(px):.1f} px, under {a.min_px:g}'))
             prog.tick()
         return miss
     res = await pool(pw, url, chunked(words, 16), a.workers, job)
@@ -450,7 +455,7 @@ async def cmd_bench(pw, url, a, meta):
         rows.append((name, ms, note))
         print(f'  {name:<34}{ms:8.1f} ms/frame   {note}', flush=True)
         return ms
-    print(f'{n} frames at 1920x1080, one page, project {PROJECT}')
+    print(f'{n} frames at {W}x{H}, one page, project {PROJECT}')
     base = await run('render only', lambda t: pg.ev('([t]) => ENGINE.render(t).then(() => 0)', t), 'drawn and rasterised, no pixels leave the page')
     pg.sink = lambda b: None
     await run('raw RGBA as Blob, POST', lambda t: pg.ev('([t, u]) => HOST.frame(t, u, "raw").then(() => 0)', t, pg.sink_path), 'lossless')
@@ -484,9 +489,11 @@ async def cmd_bench(pw, url, a, meta):
 # ---------------------------------------------------------------- main
 
 def main():
+    global W, H
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument('--ch', default='', help='only load chapters whose file name starts with one of these comma-separated prefixes')
     common.add_argument('--look', default='', help='override ENGINE.look')
+    common.add_argument('--size', default=os.environ.get('VIDEO_SIZE', ''), help='canvas size WxH, e.g. 1080x1920 for a vertical cut (default 1920x1080)')
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest='cmd', required=True)
     sub.add_parser('assets', parents=[common])
@@ -497,13 +504,19 @@ def main():
     s.add_argument('--out', required=True); s.add_argument('--workers', type=int, default=8); s.add_argument('--fmt', choices=['png', 'jpg'], default='png')
     s = sub.add_parser('video', parents=[common]); s.add_argument('range'); s.add_argument('--out', required=True)
     s.add_argument('--fps', type=float, default=24); s.add_argument('--workers', type=int, default=8)
-    s.add_argument('--w', type=int, default=W); s.add_argument('--no-audio', action='store_true')
+    s.add_argument('--w', type=int, default=None, help='output width (default: the canvas width)'); s.add_argument('--no-audio', action='store_true')
     s = sub.add_parser('lyrics', parents=[common]); s.add_argument('range', nargs='?'); s.add_argument('--workers', type=int, default=4)
+    s.add_argument('--min-px', type=float, default=MIN_PX, help=f'smallest mark that passes (default {MIN_PX})')
     s = sub.add_parser('check', parents=[common]); s.add_argument('range', nargs='?'); s.add_argument('--n', type=int, default=24)
     s.add_argument('--seed', type=int, default=1)
     s = sub.add_parser('bench', parents=[common]); s.add_argument('range', nargs='?')
     a = ap.parse_args()
 
+    if a.size:
+        try: w, h = (int(v) for v in a.size.lower().split('x'))
+        except ValueError: sys.exit(f'bad --size {a.size!r}: need WxH, e.g. 1080x1920')
+        if w < 2 or h < 2 or w % 2 or h % 2: sys.exit(f'bad --size {a.size!r}: width and height must be even (H.264 4:2:0)')
+        W, H = w, h
     if not PROJECT: sys.exit('set VIDEO_PROJECT to the project directory relative to the repo root, e.g. VIDEO_PROJECT=myvideo')
     if not (P / 'engine').is_dir(): sys.exit(f'{P / "engine"} does not exist')
     meta = gen_assets(verbose=a.cmd == 'assets')
@@ -513,6 +526,7 @@ def main():
     q = {'project': PROJECT}
     if a.ch: q['ch'] = a.ch
     if a.look: q['look'] = a.look
+    if (W, H) != (1920, 1080): q['size'] = f'{W}x{H}'
     url = f'http://127.0.0.1:{port}/engine/index.html?' + urllib.parse.urlencode(q)
 
     async def go():

@@ -1,6 +1,6 @@
 ---
 name: music-video
-description: Make an AI music video or lyric video for a song the user already has, end to end. Midjourney stills become Seedance video clips, and every lyric and graphic is drawn in code on the beat. Use this whenever the user wants a music video, lyric video, visualizer or "slopcore" video for a track, wants generated footage or lyrics synced to a song, wants an AI character to lip-sync to a vocal, mentions Midjourney plus Seedance, Higgsfield or another video model for a song, or needs the finishing work on such a video (title card, credits, watermark, audio master, cover art, posting). Also use it to plan or budget one before any money is spent.
+description: Make an AI music video or lyric video for a song the user already has, end to end. Midjourney stills become Seedance video clips, and every lyric and graphic is drawn in code on the beat. Use this whenever the user wants a music video, lyric video, visualizer or "slopcore" video for a track, wants generated footage or lyrics synced to a song, wants an AI character to lip-sync to a vocal, mentions Midjourney plus Seedance, Higgsfield or another video model for a song, or needs the finishing work on such a video (title card, credits, watermark, audio master, cover art, vertical cuts for TikTok and Reels, posting). Also use it to plan or budget one before any money is spent.
 ---
 
 # Music video
@@ -23,7 +23,7 @@ Ask for anything missing. Do not start generating without them.
 2. The lyrics as sung. Ask where the recording differs from the sheet.
 3. The lead's look: two reference images work best, a portrait and a frontal face close-up. If there is no close-up, make one during the casting test and get it approved before the plates.
 4. A spending ceiling for video generation. Confirm that it covers the clips only. Image fixes add about $10 and Midjourney is a subscription.
-5. Where it will be posted. For X and YouTube make a 16:9 master at 1080p. X needs a paid account for videos longer than 2 minutes 20 seconds. TikTok and Instagram get vertical cut-downs later, as their own layouts.
+5. Where it will be posted. For X and YouTube make a 16:9 master at 1080p. X needs a paid account for videos longer than 2 minutes 20 seconds. TikTok and Instagram get vertical cut-downs after the master, as their own layouts.
 6. Accounts: Midjourney in a Chrome you can drive, a Higgsfield API key for Seedance, an OpenRouter key for image fixes.
 
 Then set up a workspace. Read `references/setup.md`.
@@ -42,8 +42,7 @@ Each phase ends at a gate. The producer approves, and only then does the next ph
 | 6 | Prompt book and pilot | Every clip prompt written by hand, then three pilot clips, one of each kind | Producer watches the pilot. |
 | 7 | Main clip run | All clips, in batches of about ten | An explicit go on a stated cost. |
 | 8 | Chapters | Lyrics and graphics for each section of the song, then a rough cut | Producer watches and sends notes. |
-| 9 | Finishing | Opening frame, title, credits, watermark, audio master, cover art | Producer signs off the master. |
-
+| 9 | Finishing | Opening frame, title, credits, watermark, flash-frame scan, audio master, cover art | Producer signs off the master. |
 Phase by phase:
 
 - **1 to 4:** `references/analysis-and-storyboard.md`
@@ -51,6 +50,7 @@ Phase by phase:
 - **6 and 7:** `references/clips.md`, and `references/lipsync.md` for singing shots
 - **8:** `references/chapters.md`, then `toolkit/engine/ANIMATION_GUIDE.md` before writing any chapter code
 - **9:** `references/finishing.md`
+- **After the master:** `references/vertical-cuts.md` for TikTok and Reels cuts, laid out again at 1080 x 1920 from the same clips
 - **Throughout:** `references/review.md` for how to show work and take notes
 
 `references/costs.md` has the real numbers from Queso for budgeting. `references/lessons.md` lists what went wrong and the rule each mistake produced. Read both before you plan.

@@ -11,6 +11,10 @@ in the final video and fails `check`.
 ## The stage
 
 - One canvas, 1920 x 1080 px, origin top left. Globals `W = 1920`, `H = 1080`.
+- `render.py --size WxH` (or `VIDEO_SIZE`) makes the canvas another size, `--size 1080x1920` for a vertical cut.
+  `W` and `H` follow, and with them the kit's placement and every helper that lays out by them. A chapter written
+  for a tall frame is a proof chapter picked with `--ch` (see `examples/queso/engine/ch/v01_coro1.js`). Without
+  `--size` nothing changes.
 - A frame starts black. Every scene with `t0 <= t < t1` draws, lowest `z` first. Ties draw in registration
   order (chapter file name order, then order in the file).
 - Frame `i` of a render of `A:B` is at `t = A + i/24`.

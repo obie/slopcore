@@ -32,6 +32,16 @@ Reposts strip the caption and the account name. A mark inside the picture is the
 - Name the platform as well as the handle ("X: @name"), so it means something on another platform.
 - Draw it as its own layer (`99_marca.js` in the example) and render the master twice, with and without. Check it against every surface that uses the bottom edge. On Queso it moved to the top for five seconds while a news ticker ran along the bottom.
 
+## Flash frames
+
+Seedance sometimes renders a camera flash as a single blown-out frame. Queso's first upload went out with one pure white frame at 3:09. Scan every clip before the master render:
+
+```bash
+.venv/bin/python tools/flashscan.py mysong
+```
+
+It prints each frame that stands far above both of its neighbours and says whether the edit list puts that frame in the cut. On Queso it found four such frames among 12,018, one of them in the cut, and six clips that open on a bright frame ahead of their in-point. Repair a frame with `--fix CLIP:FRAME`, which averages its neighbours and keeps the original, then render again. The scan reads clip frames only, so a flash you draw on purpose in a chapter is left alone.
+
 ## Audio
 
 The video is timed to the mix you analysed. A new master has to line up with it to the sample, or every cut and lyric shifts.
@@ -85,4 +95,4 @@ Leave out "repost and I'll send you the files". Platforms demote that kind of as
 
 ## Vertical versions
 
-A 16:9 master does not crop well to vertical once type is on it. Plan vertical cut-downs as their own layouts: 15 to 30 second sections with the graphics re-set for the tall frame. Keeping the action near the centre of every plate makes this possible later.
+A 16:9 master does not crop well to vertical once type is on it. Vertical cut-downs are their own layouts: 15 to 30 second sections with the graphics set again for the tall frame, made from the clips the film already has. `references/vertical-cuts.md` has the method. Keeping the action near the centre of every plate makes them easier to frame.

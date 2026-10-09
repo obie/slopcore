@@ -1,8 +1,8 @@
 <!doctype html>
 <!--
-  engine/index.html?project=<dir>[&ch=<prefix,prefix>][&look=<mode>]
+  engine/index.html?project=<dir>[&ch=<prefix,prefix>][&look=<mode>][&size=<W>x<H>]
 
-  One 1920x1080 canvas. `await ENGINE.render(t)` draws the frame for song time t.
+  One 1920x1080 canvas (or the size given with &size=, e.g. 1080x1920). `await ENGINE.render(t)` draws the frame for song time t.
   Loads src/*.js, then <project>/engine/assets/*.js, common.js and every chapter in the manifest.
   Opened by render.py in headless Chromium. See ANIMATION_GUIDE.md.
 -->

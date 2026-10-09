@@ -33,7 +33,7 @@ const WORKER_FILE = role => path.join(os.tmpdir(), role === 'submit' ? 'slopcore
 async function tab(url, role = 'submit') {
   const pages = async () => (await cdp('raw', '-', 'Target.getTargets')).targetInfos.filter(t => t.type === 'page')
   const mine = await cdp('targets'); if (!mine.length) throw new Error('no signed-in Midjourney/Higgsfield tab found to take the profile from')
-  const ctx = mine[0].contextId
+  const ctx = (mine.find(t => /midjourney\.com/.test(t.url)) || mine[0]).contextId   // several profiles can be open: take the one where Midjourney is
   let id = null; try { id = JSON.parse(fs.readFileSync(WORKER_FILE(role), 'utf8')).targetId } catch {}
   if (!id || !(await pages()).some(t => t.targetId === id && t.browserContextId === ctx)) {
     id = null

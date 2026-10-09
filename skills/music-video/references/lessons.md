@@ -11,6 +11,7 @@ All from the making of "Queso". Quotes are the producer's.
 | The title only appeared on the end card. "Most viral music videos I've seen these days usually have a title overlay within the first 5-10 seconds." | Title in the first seconds. |
 | The video opened on a title over black. "She just has to show in the first frame." | The lead is in frame one. |
 | The end credit was written in Spanish by guesswork and had to be replaced. | Ask for the wording of every credit. |
+| The first Instagram teaser set the 16:9 picture as a strip between bars. The lyrics were too small to read on a phone. | A vertical version is its own layout, with the type set for the tall frame. |
 
 ## Characters and plates
 
@@ -39,6 +40,7 @@ All from the making of "Queso". Quotes are the producer's.
 | A take did its action twice with a gap in between, and the cut landed in the gap. | Check where the action falls inside the take and set the in-point. |
 | Graphics pinned to plate pixels drifted once the stills became moving clips. | Key pinned graphics to clip time. |
 | Clips were checked on frame sheets only. | Say so, and ask the producer to watch in motion with sound. |
+| Seedance rendered a camera flash as one pure white frame. It went out in the first upload, at 3:09. | Scan every clip for one-frame brightness spikes before the master render. |
 
 ## Money
 

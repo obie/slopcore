@@ -56,6 +56,8 @@ Good places to start reading:
 8. **Chapters.** Parallel agents draw the lyrics and graphics for each section. You get a rough cut.
 9. **Finishing.** Opening frame, title, credits, watermark, audio master, cover art.
 
+After the master, sections of the film are laid out again at 1080 x 1920 for TikTok and Reels, from the same clips.
+
 ## What you need
 
 - Claude Code

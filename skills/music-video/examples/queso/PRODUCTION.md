@@ -83,6 +83,19 @@ Obie's verdicts so far: W03 take 5 "is perfect!!!! perfect lip sync". W81 take 1
 - End card (`09_cierre.js`): QUESO, Saindra, "Original lyrics and produced by Obie Fernandez". English at the end is Obie's choice.
 - Watermark (`99_marca.js`): "X: @obie", bottom centre, loaded only with `--ch ...,99`. `queso-master-1080p-watermark.mp4` has it; `queso-master-1080p.mp4` is the clean master.
 
+## Vertical cuts (TikTok and Instagram)
+
+Rendered with `render.py ... --size 1080x1920`. Each cut is its own chapter file whose scenes are `proof: true`, so it loads only when picked with `--ch`. The picture is a vertical slice of the 16:9 clips; the lyric surfaces are laid out again; type stays out of the top 220 px, the bottom 480 px and the right 150 px (`--ch vNN,v99` draws those zones). Handle in the picture: `@saindra_ofc`. Every cut ends on a four-beat card with the release line (14 de octubre). The lyric gate for a vertical cut runs at `--min-px 56`.
+
+| File | Section | Song time | Output in `release/` |
+|---|---|---|---|
+| `v01_coro1.js` | chorus 1 | 7.77 to 30.42 s | `tiktok-queso-coro1-vertical.mp4` |
+| `v05_repetimos.js` | verse 2, fast half and the asides | 103.89 to 122.87 s | `tiktok-queso-repetimos-vertical.mp4` |
+| `v07_mandamientos.js` | breakdown | 172.46 to 186.54 s | `tiktok-queso-mandamientos-vertical.mp4` |
+| `v08_santa.js` | final chorus | 184.09 to 206.75 s | `tiktok-queso-santa-vertical.mp4` |
+
+Flash frames: Seedance sometimes renders the camera flash as one blown-out frame. F83b-t1 frame 18 was pure white and showed in the film at 3:09; it is now a blend of its neighbours (original kept in `media/scratch/flash-fix/`). `tools/flashscan.py queso` finds them: F12-t1 frame 3 and F33-t1 frames 11 and 79 have one too, all outside the part the film uses. Run it on new clips before a master render. The one-frame white flash on each commandment's verb in the breakdown is drawn by the chapter on purpose.
+
 ## Chapters
 
 Nine chapter files in `engine/ch/`. Cuts between chapters are hard cuts on the beat named.

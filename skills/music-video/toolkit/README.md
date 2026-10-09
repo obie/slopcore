@@ -199,6 +199,16 @@ Kinds: `lips` is reference-to-video with the plate as `@Image1` and a clean voca
 as the exact first frame, silent. The sync check cross-correlates the take's audio with what it was given to find the
 lag, and for lips clips locates each sung word with Whisper. `WHISPER_LANGUAGE` sets the language of that check.
 
+### flashscan.py
+
+`flashscan.py <project> [CLIP ...] [--jump 30] [--fix CLIP:FRAME ...]`: finds single blown-out frames in
+`media/clipframes/`. Seedance sometimes renders a camera flash as one frame far brighter than the frames on either side,
+and in a cut it reads as a white blink. Each frame's mean brightness (0 to 255) is compared with its neighbours, and a
+frame `--jump` levels or more above both is printed, largest first. The last column places the frame using `edl.json`
+and `shots.json`: `in the cut at M:SS.ss`, `not in the cut`, or `check the cut` for warped clips and clips that share a
+shot. The scan exits 1 when a spike is in the cut. `--fix CLIP:FRAME` replaces a frame with the average of its two
+neighbours and keeps the original in `media/scratch/flash-fix/`. Queso's 12,018 frames scan in about five seconds.
+
 ### board.py
 
 `board.py <project> [serve [port]]`: the storyboard as one HTML page (`<project>/storyboard.html`). Reads `shots.json`
@@ -248,11 +258,14 @@ still <t> --out f.png          one frame at song time t (seconds)
 sheet <t1,t2,..|A:B:n> --cols 4 --w 480 --out f.jpg
 frames A:B --fps 24 --out dir --workers N [--fmt jpg]
 video A:B --out f.mp4 --fps 24 --workers N [--w 1920] [--no-audio]
-lyrics [A:B] [--workers N]     the gate: every sung word in range must carry an LY.mark at 36 px or taller; exits 1 on any miss
+lyrics [A:B] [--workers N] [--min-px 36]
+                               the gate: every sung word in range must carry an LY.mark at --min-px or taller; exits 1 on any miss
 check [A:B] --n 24             purity: n frames in order, then shuffled in a fresh browser; pixel hashes must match
 bench [A:B]                    ms per frame
 ```
 
-Every command takes `--ch 03,07` (load only chapters whose file name starts with one of the prefixes) and `--look <mode>`.
+Every command takes `--ch 03,07` (load only chapters whose file name starts with one of the prefixes), `--look <mode>`
+and `--size WxH`. The canvas is 1920x1080 unless `--size` or the `VIDEO_SIZE` environment variable names another size;
+`--size 1080x1920` renders a vertical cut, and the engine's `W` and `H` follow. Width and height must be even.
 The authoring API (`MEDIA`, `OCC`, `TXT`, `LY`, timing helpers) is described in `engine/ANIMATION_GUIDE.md`. A project
 supplies its own `engine/common.js`, `engine/ch/NN_name.js` chapter files and media; this folder holds only the engine.

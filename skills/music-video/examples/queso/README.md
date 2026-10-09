@@ -12,7 +12,7 @@
 6. `PLATES.md`: how the plates were made and chosen.
 7. `bible/LEAD.md`: the lead character's reference sheet and the rules for keeping her face consistent.
 8. `NOTES.md`: working notes, including licences of tools used.
-9. `engine/common.js` and `engine/ch/`: the chapter code. One file per section of the song (`01_aperitivo.js` through `09_cierre.js`), plus a timing overlay (`00_timing.js`), a watermark (`99_marca.js`), a benchmark (`_bench.js`) and the shared kit (`_kit.js`). `engine/fonts/` has the fonts with their licence files.
+9. `engine/common.js` and `engine/ch/`: the chapter code. One file per section of the song (`01_aperitivo.js` through `09_cierre.js`), plus a timing overlay (`00_timing.js`), a watermark (`99_marca.js`), a benchmark (`_bench.js`) and the shared kit (`_kit.js`). The `v` files are the vertical cuts for TikTok and Reels: chorus 1 (`v01_coro1.js`, the pattern for the others), the fast half of verse 2 (`v05_repetimos.js`), the breakdown (`v07_mandamientos.js`) and the final chorus (`v08_santa.js`), with the safe-zone overlay they are checked against (`v99_zonas.js`). `engine/fonts/` has the fonts with their licence files.
 10. Data the code reads: `shots.json` (shot list with prompts), `edl.json` (edit decision list), `picks.json` (chosen takes), `align_overrides.json` (hand corrections to word timing), `media/audio/words.json` (word timings) and `media/audio/beatmap.json` (beat grid).
 11. `cover/queso-cover-pull.jpg`: the chosen cover.
 12. `stills/`: eight frames from the finished video, at 0.0, 9.6, 16.6, 44.0, 124.0, 163.5, 195.3 and 228.6 seconds.

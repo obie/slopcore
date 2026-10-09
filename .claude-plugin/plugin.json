@@ -1,6 +1,6 @@
 {
   "name": "slopcore",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Make an AI music video for a song you already have: Midjourney stills, Seedance clips, and every lyric drawn in code on the beat.",
   "author": { "name": "Obie Fernandez" },
   "homepage": "https://github.com/obie/slopcore",
