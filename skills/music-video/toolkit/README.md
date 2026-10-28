@@ -1,7 +1,8 @@
 # Music video toolkit
 
-Scripts for making a music video from a song: beat grid and word timings, Midjourney stills, Seedance clips through
-the Higgsfield API, image fixes, subject mattes, review pages, and a canvas renderer for lyrics and graphics.
+Scripts for making a music video from a song: beat grid and word timings, stills from GPT Image and Midjourney,
+Seedance clips and lip sync through the Sume or Higgsfield APIs, image fixes, subject mattes, review pages, and a
+canvas renderer for lyrics and graphics.
 
 ## Layout
 
@@ -140,6 +141,30 @@ Options: --model REPO (default ZhengPeng7/BiRefNet; also ZhengPeng7/BiRefNet_HR,
 
 Model: BiRefNet through `transformers` with `trust_remote_code`. A clip is skipped when it has as many mattes as
 frames. Each matte is blended with its neighbours (1-2-1 weights) to calm flicker.
+
+### sume.py
+
+Client for the Sume API, a router for image and video models (Seedance 2.5, GPT Image 2.5, Kling, sync-lipsync-3,
+Topaz upscaling and others) at about half Higgsfield's list price. Every generate command costs money. Key:
+`SUME_API_KEY` in the environment or in `<workspace root>/.env`.
+
+```
+sume.py models image|video             model ids, with $/s per resolution for video (free)
+sume.py upload FILE [...]              upload, print the public URL; cached in <workspace root>/.sume-uploads.json
+sume.py image OUT.png MODEL "prompt" [--ref F ...] [--ar 16:9] [--q high] [--res 2K] [--n 1]
+sume.py video OUT.mp4 MODEL "prompt" [--image F] [--end F] [--ref F ...] [--aref AUDIO ...] [--vref VIDEO ...]
+        [--audio] [--res 720p] [--dur 5] [--ar 16:9] [--draft]
+sume.py video OUT.mp4 MODEL --draft-job JOB_ID       re-render an approved 480p draft at 1080p
+sume.py video OUT.mp4 MODEL "" --video CLIP --audio-url VOCAL   lip sync
+sume.py fetch OUT JOB_ID
+```
+
+`--image` is image-to-video: the picture is frame 1. `--ref`, `--aref` and `--vref` are reference-to-video, named
+`@Image1`, `@Audio1` and `@Video1` in the prompt. Sume does not take a first frame together with audio references.
+`--draft` renders Seedance at 480p for about a fifth of the 1080p price; the job id lands in `OUT.job.json`, and
+`--draft-job` re-renders the same scene at 1080p once the shot is approved. Each result is saved with its job JSON
+beside it; a second artifact (a lip-sync poster, say) is saved as `OUT-1.<ext>`. `--dry` prints the request body and
+sends nothing. Jobs cannot be cancelled once generation has started, and they bill either way.
 
 ### hfapi.py
 

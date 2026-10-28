@@ -5,3 +5,7 @@ __pycache__/
 .env
 node_modules/
 *-workspace/
+.gstack/
+docs/
+.wrangler/
+.sume-uploads.json

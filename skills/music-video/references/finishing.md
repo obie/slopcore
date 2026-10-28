@@ -1,6 +1,6 @@
 # Finishing
 
-Phase 9. The rough cut is approved and every shot is video. What remains decides how the video looks in a feed and whether it survives being reposted.
+Phases 10 and 11. The rough cut is approved and every shot is video. What remains decides how the video looks in a feed and whether it survives being reposted.
 
 ## The first frame
 
@@ -14,13 +14,17 @@ const T_OPEN = B(1), POSTER = SHOT.edit('s092');
 if (t < T_OPEN) SHOT.draw(ctx, 's001', t, { clip: POSTER.clip, in: 0, warp: null });
 ```
 
-Some platforms pick their own thumbnail from the middle of the video. Tell the producer to check the preview in the composer and set it by hand if it is wrong.
+Juego took the other route: frame 1 is the full title card (presenting line, artist, title), taken from a later frame of the same master. Replace frame 1 rather than inserting a frame, so the length and the sync do not change, and re-encode at high quality with the audio copied.
+
+YouTube picks its automatic thumbnail from the middle of the video, so the frame-one trick does nothing there. Upload a custom thumbnail. Some other platforms also pick from the middle. Tell the producer to check the preview in the composer and set it by hand if it is wrong.
 
 ## Title and credits
 
-- Put the title on screen in the first seconds. Keep it clear of the first chorus hook if the hook is a visual gag, so the title does not step on it.
+- Put the title on screen in the first seconds. Keep it clear of the first chorus hook if the hook is a visual gag.
 - Ask the producer for the exact wording of every credit. Do not guess the language or the phrasing. Queso's producer wanted a Spanish presenting line at the start ("Obie Fernandez presenta") and an English credit at the end ("Original lyrics and produced by").
-- Set credits as small tracked capitals next to the artist's name. They should be readable on a phone, so 34 px or larger on the 1080p frame.
+- Set credits as small tracked capitals next to the artist's name, 34 px or larger on the 1080p frame so they read on a phone.
+- Fade graphics in and out over about 0.25 s. Cards that pop on and off look cheap: "quick fade much better". Sung words may still land hard on their beat.
+- Dissolve into the end card from the last frame over about 1 s. A cut to the end card was rejected.
 - An end card that lands on the last bar gives a credit only a second or two. Offer a held slate after the last note if the producer wants it readable for longer.
 
 ## Watermark
@@ -28,9 +32,10 @@ Some platforms pick their own thumbnail from the middle of the video. Tell the p
 Reposts strip the caption and the account name. A mark inside the picture is the only credit that travels with a clip.
 
 - Keep it faint and small: about 28 px, half transparent, with a thin dark edge so it holds on light and dark footage.
-- Put it at the bottom centre. A repost cropped to a square or a vertical keeps the middle columns of the frame.
-- Name the platform as well as the handle ("X: @name"), so it means something on another platform.
-- Draw it as its own layer (`99_marca.js` in the example) and render the master twice, with and without. Check it against every surface that uses the bottom edge. On Queso it moved to the top for five seconds while a news ticker ran along the bottom.
+- Put it at the bottom centre. A repost cropped to a square or a vertical keeps the middle columns.
+- Name the platform as well as the handle ("X: @name").
+- Draw it as its own layer (`99_marca.js` in the example) and render the master twice, with the mark and clean. TMJ shipped both. Check it against every surface that uses the bottom edge. On Queso it moved to the top for five seconds while a news ticker ran along the bottom.
+- Vertical cuts decide their own handle. See `references/vertical-cuts.md`.
 
 ## Flash frames
 
@@ -46,19 +51,20 @@ It prints each frame that stands far above both of its neighbours and says wheth
 
 The video is timed to the mix you analysed. A new master has to line up with it to the sample, or every cut and lyric shifts.
 
-1. Check alignment before swapping: cross-correlate the new file against the old one in several windows. The lag must be zero.
+1. Check alignment before swapping: cross-correlate the new file against the old one in several windows. The lag must be zero. TMJ's master checked at 0 samples in all 12 windows, so the picture was not rendered again.
 2. Keep the old file under another name and put the new one at `media/audio/song.wav`.
-3. The picture does not need rendering again. Render once with `--no-audio` and attach the audio:
+3. Render once with `--no-audio` and attach the audio:
 
 ```bash
 ffmpeg -i video.mp4 -i song.wav -map 0:v -map 1:a -c:v copy -c:a aac_at -b:a 320k -shortest -movflags +faststart master.mp4
 ```
 
-Loudness and peaks, measured on Queso:
+Loudness and peaks:
 
-- The scratch mix was -16.1 LUFS, which is quiet next to the roughly -14 that YouTube plays at. Ask for a proper master.
-- A master with a -0.2 dB ceiling went over full scale once compressed: +1.9 dB with ffmpeg's own AAC encoder and +0.3 dB with Apple's (`aac_at`, macOS only).
-- Ask for a limiter ceiling of -1 dB with true-peak mode on. That master measured -10.2 LUFS and stayed at -0.5 dB after encoding.
+- Queso's scratch mix was -16.1 LUFS, quiet next to the roughly -14 YouTube plays at. Ask for a proper master.
+- A master with a -0.2 dB ceiling went over full scale once compressed: +1.9 dB with ffmpeg's AAC encoder, +0.3 dB with Apple's (`aac_at`, macOS only).
+- Ask for a limiter ceiling of -1 dB with true-peak mode on. Queso's measured -10.2 LUFS and stayed at -0.5 dB after encoding. TMJ's master is -9.9 LUFS at -0.9 dBTP.
+- When you cut an excerpt for a short clip, put a limiter in the mux as well, and measure the result. One excerpt peaked at +1.8 dBFS on its first encode.
 
 Measure with `ffmpeg -i file -af ebur128=peak=true -f null -`.
 
@@ -78,12 +84,37 @@ ffmpeg -i master-24.wav -af "aresample=osf=s16:dither_method=triangular" -c:a pc
 - 2000 x 2000 or larger, sRGB, JPG and PNG.
 - Only the title and the artist name. Stores reject covers that carry handles, web addresses or extra credits.
 - Offer three: the hook of the song in one picture, the funniest frame, and the cleanest one. Check each at thumbnail size.
-- Keep the type off her face. Look at the result and move it until it is clear.
-- The picture the producer chooses for the cover is a good candidate for the first frame of the video.
+- Keep the type off her face. The picture the producer chooses is a good candidate for the first frame.
+
+## Before it spreads
+
+- Register the song with the distributor before the video goes out, so the recording is claimed under the producer's name. That needs the cover and the audio master, so finish both first.
+- Expect claims on covers and remixes. Vuela is a remix of a 1991 hit, and it belongs to its rights holders however the video is made.
+- On YouTube, answer "Altered or synthetic content" yes for a film with realistic AI characters. Turn on the AI-generated label in the short-video apps.
+- Make the description accurate. List what is generated and what is real footage, and the tools. Add chapters that follow the song's sections.
 
 ## Release order
 
-If the song may get reposted widely, the producer should register it with their distributor before the video goes out, so the recording is claimed under their name. That needs the cover and the audio master, which is why both are finished before posting.
+Teasers first, then the film, then everything cut from it. For TMJ:
+
+1. Teasers: four vertical sections of 14 to 48 seconds, one a day, each ending on the release card.
+2. The full 16:9 video on YouTube, ahead of the streaming date because its theme, Día de Muertos, had a date of its own. The producer decided this over a plan to hold it.
+3. The full vertical version for Reels and Shorts.
+4. A TikTok cut of the hook that introduces the sound (25.7 s on TMJ). A sound posted before the distributor delivers is its own "original sound", so uses split between it and the official track once that exists. Decide with the producer which comes first.
+5. A Spotify Canvas.
+6. A pre-save link, set up by the producer, in the end card and the captions.
+
+Pitch the track in Spotify for Artists at least a week before release. Payment and uploads are the producer's job.
+
+### Spotify Canvas
+
+A Canvas is a silent loop of 3 to 8 seconds, 1080 x 1920. Make it from a raw take, not from the master with lyrics on it.
+
+- Candidates come only from takes approved in the edit list. Make four and show them in a review page with thumbs and notes.
+- Crop 9:16 around the subject, scale to 1080 x 1920 at 24 fps, and crossfade the last 0.6 s into the first frames so the loop is seamless. The first frame of the loop should equal the last.
+- ffmpeg's `xfade` needs a constant frame rate. Add `fps=24` after each `setpts=PTS-STARTPTS` in the trim branches.
+- Rule out crops that are mostly a torso, shots with screen UI or lettering, and shots of someone else's character.
+- The producer uploads it in Spotify for Artists (Music, the track, Canvas).
 
 ## Posting
 
@@ -93,6 +124,4 @@ Hold to what is true. If the producer wrote the song and directed every shot, th
 
 Leave out "repost and I'll send you the files". Platforms demote that kind of ask, direct messages are capped per day, and this genre spreads by sharing openly.
 
-## Vertical versions
-
-A 16:9 master does not crop well to vertical once type is on it. Vertical cut-downs are their own layouts: 15 to 30 second sections with the graphics set again for the tall frame, made from the clips the film already has. `references/vertical-cuts.md` has the method. Keeping the action near the centre of every plate makes them easier to frame.
+When you show the producer a render, quit the video player first and wait for it to exit, or the stale file opens.

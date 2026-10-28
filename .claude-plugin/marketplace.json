@@ -5,18 +5,18 @@
   },
   "metadata": {
     "description": "A Claude Code skill and toolkit for making AI music videos from a finished song",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "slopcore",
       "source": "./",
-      "description": "Make an AI music video for a song you already have: Midjourney stills, Seedance clips, and every lyric drawn in code on the beat.",
-      "version": "0.2.0",
+      "description": "Make an AI music video for a song you already have: designed sets and characters, GPT Image stills, Seedance clips, lip sync, and every lyric drawn in code on the beat.",
+      "version": "0.3.0",
       "author": {
         "name": "Obie Fernandez"
       },
-      "keywords": ["music-video", "slopcore", "midjourney", "seedance", "lyric-video", "generative-video"],
+      "keywords": ["music-video", "slopcore", "seedance", "gpt-image", "midjourney", "lip-sync", "lyric-video", "generative-video"],
       "category": "creative",
       "homepage": "https://github.com/obie/slopcore",
       "repository": "https://github.com/obie/slopcore",
