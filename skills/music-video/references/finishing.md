@@ -4,7 +4,7 @@ Phases 10 and 11. The rough cut is approved and every shot is video. What remain
 
 ## The first frame
 
-Feeds show frame one before anyone presses play. A black frame or a title on black wastes it.
+Feeds show frame one before anyone presses play. A black frame or a title on black wastes it. Never fade up from black at the head: a black first frame shows as a black thumbnail on many platforms. Open on picture.
 
 Open on the lead. On Queso the film opens with one beat of the cover shot playing as video, the title beside her face, then cuts on the beat to where the story starts. The footage is borrowed from a shot later in the film:
 
@@ -20,7 +20,7 @@ YouTube picks its automatic thumbnail from the middle of the video, so the frame
 
 ## Title and credits
 
-- Put the title on screen in the first seconds. Keep it clear of the first chorus hook if the hook is a visual gag.
+- Where the title goes is the producer's choice, so ask. Queso and Juego put it on screen in the first seconds, as described above. On later films the same producer kept the title and the credits for the end card, with nothing in the middle of the film. An opening title stays clear of the first chorus hook if the hook is a visual gag.
 - Ask the producer for the exact wording of every credit. Do not guess the language or the phrasing. Queso's producer wanted a Spanish presenting line at the start ("Obie Fernandez presenta") and an English credit at the end ("Original lyrics and produced by").
 - Set credits as small tracked capitals next to the artist's name, 34 px or larger on the 1080p frame so they read on a phone.
 - Fade graphics in and out over about 0.25 s. Cards that pop on and off look cheap: "quick fade much better". Sung words may still land hard on their beat.
@@ -46,6 +46,17 @@ Seedance sometimes renders a camera flash as a single blown-out frame. Queso's f
 ```
 
 It prints each frame that stands far above both of its neighbours and says whether the edit list puts that frame in the cut. On Queso it found four such frames among 12,018, one of them in the cut, and six clips that open on a bright frame ahead of their in-point. Repair a frame with `--fix CLIP:FRAME`, which averages its neighbours and keeps the original, then render again. The scan reads clip frames only, so a flash you draw on purpose in a chapter is left alone.
+
+## Final assembly
+
+Render the final in segments, never as one continuous encode.
+
+- One video-only segment per scene, and one per gap between scenes. Every segment starts on a keyframe and uses identical encoder settings.
+- Join the segments with stream copy (ffmpeg's concat demuxer with `-c copy`) and lay the audio over the join.
+- A fix to one scene then re-renders that scene's segment only. The rest of the film is not encoded again, so it cannot change.
+- Keep the list of segment ranges in one place, and have the assembly script render only the segments whose inputs changed.
+
+Read the review feedback again at the moment you start a final render, even if you read it earlier in the session. Notes arrive while other work is running. Apply every note or flag it to the producer before rendering.
 
 ## Audio
 

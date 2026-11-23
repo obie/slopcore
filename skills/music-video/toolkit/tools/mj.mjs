@@ -39,7 +39,7 @@ async function tab(url, role = 'submit') {
     id = null
     for (let i = 0; i < 2 && !id; i++) { try { id = (await cdp('open', 'about:blank', ctx)).targetId } catch { await sleep(1000) } }
     if (!id) { const before = (await pages()).map(t => t.targetId)
-      await ev(mine[mine.length - 1].targetId, `(window.open('about:blank','_blank'),1)`); await sleep(1500)
+      await ev(mine.filter(t => t.contextId === ctx).pop().targetId, `(window.open('about:blank','_blank'),1)`); await sleep(1500)   // open from a page of the SAME profile
       id = (await pages()).find(t => !before.includes(t.targetId) && t.browserContextId === ctx)?.targetId
       if (!id) throw new Error('could not open a worker tab in the signed-in profile') }
     fs.writeFileSync(WORKER_FILE(role), JSON.stringify({ targetId: id }))

@@ -113,7 +113,7 @@ Rules that held up:
 - **Keep the action near the middle of the frame** if vertical versions will be cut later.
 - **Write gags as physical actions.** The producer's own additions on Queso were all of this kind: she burps, she crosses her eyes, she gets doused in salsa.
 - **Give each shot a camera move** by name (truck left, tilt up, snap zoom). A move between two frames needs both frames from one camera position, or the video model holds and then jumps.
-- **Protect the opening.** The lead is in the first frame, and the title appears in the first seconds.
+- **Protect the opening.** The lead is in the first frame. If the producer wants an opening title, it appears in the first seconds.
 
 Then let a second model attack the storyboard before anything is generated. A Codex review of Tía Mari Juana's shot list (`codex exec`, told to write a report and not to edit anything) caught lyric timing errors, two band members who could not stand side by side on that stage, and a missing state and props field. Run it again at the plate and clip gates.
 

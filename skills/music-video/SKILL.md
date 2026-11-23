@@ -92,7 +92,7 @@ Phase by phase:
 
 **Say what a delete does before running it.** Keep the old version of anything you replace. Producers change their minds.
 
-**The lead is in the first frame.** Feeds show frame one before anyone presses play. Open on the best shot of the lead with the title beside the face.
+**The lead is in the first frame.** Feeds show frame one before anyone presses play. Open on the best shot of the lead, never on black or a fade up from black. Ask the producer where the title goes: the opening seconds or the end card.
 
 ## Working with subagents
 

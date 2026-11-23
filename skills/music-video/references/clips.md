@@ -22,7 +22,7 @@ Keep each draft's job id in the clip's record. For clips that are not Seedance (
 |---|---|---|---|
 | `lips` | reference-to-video | the plate as `@Image1`, the vocal for that line as `@Audio1` | Someone sings or speaks; a lip-sync model finishes it (`lipsync.md`) |
 | `motion` | reference-to-video | the plate as `@Image1`, the song from the clip's start as `@Audio1`; where vocals play and nobody on screen sings, the instrumental instead, plus "nobody sings, talks or mouths words" | People moving who should land on the beat |
-| `insert` | image-to-video | the plate as the exact first frame, silent | Empty sets, objects, smoke |
+| `insert` | image-to-video | the plate as the exact first frame, silent; with `- last: PLATE` a second plate as the exact last frame | Empty sets, objects, smoke; a move between two controlled frames, such as a tilt from the floor up to a face |
 
 Rules behind the table:
 

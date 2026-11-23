@@ -6,16 +6,20 @@ The producer's eye is the quality bar. Everything here is about getting pictures
 
 Each review is a page with a player or image for every item, thumbs up and down, and a note box. You read the notes straight from a file.
 
-- **Serve it locally.** A small server of your own serves the project folder. It must honour HTTP Range requests, or videos will not seek. An artifact page caps each file at 16 MB, which forces a down-res of the cut, so use artifacts only to share.
-- **One manifest per review:** sections of items with `id`, `src`, `kind` (video or image) and `label`. Newest whole thing first: the full cut, then chapters, then clips in story order. Give each item a one-line caption that says what changed.
-- **Autosave, always.** Votes and notes write to a feedback JSON beside the manifest. There is no Save button. Save on input after a short pause (about 700 ms) and on blur. Every vote write includes the note box's current text. Never overwrite a box that is focused or has unsaved text. A Save button lost a dozen notes once: "make the goddam comment inputs save automatically".
+- **Serve it locally.** `toolkit/tools/serve.py <project>` serves the project folder on `127.0.0.1` and the page at `/review/<name>`. It honours HTTP Range requests; without them videos will not seek. It answers only on this machine, and refuses writes that come from another web page. An artifact page caps each file at 16 MB, which forces a down-res of the cut, so use artifacts only to share.
+- **One manifest per review,** `<project>/review/<name>.json`: sections of items with `id`, `src`, `kind` (video or image) and `label`. Newest whole thing first: the full cut, then chapters, then clips in story order. Give each item a one-line caption that says what changed.
+- **Autosave, always.** Votes (pick, fix, nix) and notes write to a feedback JSON beside the manifest, `<name>.feedback.json`. "Fix" means keep the idea and repair what the note names. There is no Save button. Save on input after a short pause (about 700 ms) and on blur. Every vote write includes the note box's current text. Never overwrite a box that is focused or has unsaved text. A Save button lost a dozen notes once: "make the goddam comment inputs save automatically".
 - **Archive old notes each round.** Move the feedback file to a new name before the next round, so the producer starts with empty boxes.
 - **Use an in-page lightbox** for zoom: click to enlarge, arrow keys to step, Esc to close. Links that open the image in a new tab can be blocked on hosted pages.
 - **Read the feedback file before the next round.** Do not ask for verdicts in chat.
 
 ## Review from a phone
 
-Producers often drive the session from a phone. A file opened on the desktop is invisible to them, so put the work behind a link. A Cloudflare quick tunnel to the review server does it:
+Producers often drive the session from a phone. A file opened on the desktop is invisible to them, so put the work behind a link.
+
+If the producer's phone and your machine are on the same Tailscale network, use `toolkit/tools/serve_tailnet.py <project>`. It binds the tailnet address only and serves the review pages, their manifests, the feedback and the media under `<project>/review/`, so votes and notes still save from the phone. Nothing else in the project is reachable. Copy or link the files a review shows into `review/<name>/` before sending the address.
+
+Otherwise a Cloudflare quick tunnel does it, pointed at the view-only server described below (`board.py <project> serve PORT --share`). Do not point a tunnel at `serve.py`: it serves the whole project, and it refuses requests that arrive under any host name but its own.
 
 ```bash
 : > /tmp/cf-empty.yml

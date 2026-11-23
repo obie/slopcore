@@ -15,6 +15,11 @@ HOW = {'L': ('lip-sync', '#c0392b'), 'M': ('motion', '#b9770e'), 'F': ('insert',
 
 def build():
     sj = json.loads((P / 'shots.json').read_text()); shots = sj['shots']
+    chn = {c['id']: c['name'] for c in sj.get('chapters', [])}
+    for s in shots:     # shots.json from storyboard.py: plates are names, the batch is plates-<chapter>, other fields are named differently
+        s['plates'] = [{'name': p, 'batch': f"plates-{s['chapter']}"} if isinstance(p, str) else p for p in s['plates']]
+        s.setdefault('section', chn.get(s.get('chapter'), s.get('chapter', ''))); s.setdefault('how', {'LS': 'L', 'M': 'M', 'I': 'F'}.get(s.get('kind'), s.get('kind', 'S')))
+        s.setdefault('type', s.get('surface', '')); s.setdefault('gfx', s.get('graphics', ''))
     pj = json.loads((P / 'picks.json').read_text()) if (P / 'picks.json').exists() else {}
     picks, edited, new = pj.get('picks', {}), pj.get('edited', {}), set(pj.get('new', []))
     def thumb(p):
@@ -23,7 +28,7 @@ def build():
         elif 'have' in p: cands = [P / f"mj/{p['have']}-{n or 1}.jpeg"]
         else: cands = ([P / f"mj/{p.get('batch', 'plates-01')}/{name}-{n}.jpeg"] if n else []) + [P / f"mj/{p.get('batch', 'plates-01')}/{name}-1.jpeg"]
         for cand in cands:
-            if cand.exists(): return (f'<figure><img loading="lazy" class="pl" data-plate="{html.escape(name)}" src="{cand.relative_to(P)}">'
+            if cand.exists(): return (f'<figure><img loading="lazy" class="pl" data-plate="{html.escape(name)}" src="{cand.relative_to(P)}?v={int(cand.stat().st_mtime)}">'
                                       f'<figcaption>{"<u>NEW</u> " if name in new else ""}{html.escape(name)}{" #" + str(n) if n else " (no pick yet)"}<em></em></figcaption></figure>')
         return f'<div class="none">{html.escape(name)}: rendering</div>'
     rows, sec = [], None

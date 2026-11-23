@@ -29,7 +29,8 @@ A block in PROMPTS.md:
 
 kinds: lips   = reference-to-video, @Image1 the plate, @Audio1 a clean vocal holding only the quoted lines
        motion = reference-to-video, @Image1 the plate, @Audio1 the song from t0, so the action lands on our beats
-       insert = image-to-video, the plate is the exact first frame, silent
+       insert = image-to-video, the plate is the exact first frame, silent; with `- last: PLATE` that plate is the exact
+                last frame too (a move between two controlled frames, e.g. a tilt from the floor up to her face)
 Sync check (lips, and timing for motion): Seedance copies @Audio1 into its own soundtrack and the mouth follows that
 soundtrack, so the take's audio is cross-correlated with what it was given: first the lag, then which spans match.
 """
@@ -64,6 +65,7 @@ def apply():
         r = {'clip': clip, 'shots': shots.split(), 'kind': f['kind'], 'plate': f['plate'], 't0': float(f['t0']), 'dur': int(dur), 'res': res,
              'lines': [int(x) for x in f.get('lines', '').replace(',', ' ').split()], 'story': f.get('story', ''), 'prompt': expand(prompt.strip()),
              'takes': old.get('takes', [])}
+        if f.get('last'): assert (P / f"media/plates/{f['last']}.jpg").exists(), (clip, 'last plate missing', f['last']); r['last'] = f['last']
         r.update({k: old[k] for k in ('pin', 'qa') if old.get(k) is not None})   # a pinned take and its retiming survive a re-apply
         save(r); n += 1
     print(f'{n} clips applied')
@@ -86,7 +88,7 @@ def cut_audio(c):
 def submit(c):
     r = load(c); plate = P / f"media/plates/{r['plate']}.jpg"; pf = SH / f'{c}.prompt.txt'; pf.write_text(r['prompt'])
     cmd = [PY, HF, 'submit', '--project', str(P), '--clip', c, '--mode', MODE[r['kind']], '--prompt-file', str(pf), '--dur', str(r['dur']), '--res', r['res'], '--max-usd', flag('--max-usd')]
-    if r['kind'] == 'insert': cmd += ['--first-frame', str(plate), '--no-audio']
+    if r['kind'] == 'insert': cmd += ['--first-frame', str(plate)] + (['--last-frame', str(P / f"media/plates/{r['last']}.jpg")] if r.get('last') else []) + ['--no-audio']
     else: cmd += ['--ar', '16:9', '--image', str(plate), '--audio', str(cut_audio(c))]
     for f in ('--dry-run', '--again'):
         if f in sys.argv: cmd.append(f)
@@ -209,7 +211,7 @@ def edl():
         lag = pin.get('lag', (r['takes'][n - 1].get('sync') or {}).get('lag') or 0.0); lag = lag if 0 <= lag < 1.5 else 0.0
         for sid in r['shots']:
             if sid not in shots: continue
-            names = [p['name'] for p in shots[sid]['plates']]
+            names = [p if isinstance(p, str) else p['name'] for p in shots[sid]['plates']]
             if re.search(r'[a-z]$', c) and r['plate'] in names:   # F59a, F59b: one clip per plate, each starting before its plate's own cut
                 k = names.index(r['plate']); s = shots[sid]; cut = s['t0'] if k == 0 else BEAT0 + PERIOD * round(s['b0'] + (s['b1'] - s['b0']) * k / len(names))
                 out.setdefault(sid, {}).setdefault('plates', {})[r['plate']] = {'clip': f'{c}-t{n}', 'in': round(cut - r['t0'] + lag, 3)}

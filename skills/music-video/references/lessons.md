@@ -8,7 +8,7 @@ From the making of "Queso", "READ ME", "Juego", "Vuela" and "Tía Mari Juana" (T
 |---|---|
 | Queso's storyboard kept 40 of 93 shots as stills moved by the camera. "That's not what I want. I want everything to be video." Cost: 46 more clips. | Every shot is a clip from the first storyboard. |
 | A clip for a shot that cut between three pictures only covered one. | One clip per picture. |
-| The title only appeared on the end card. "Most viral music videos I've seen these days usually have a title overlay within the first 5-10 seconds." | Title in the first seconds. |
+| The title only appeared on the end card. "Most viral music videos I've seen these days usually have a title overlay within the first 5-10 seconds." | Title in the first seconds. On later films the same producer kept the title for the end card, so ask each producer (`finishing.md`). |
 | The video opened on a title over black. "She just has to show in the first frame." | The lead is in frame one. |
 | On READ ME, cutting on lyric-line starts put 21 of 74 cuts on a downbeat. "For such a fast track with such a dominant kick it's really distracting." | Cut on the 1 of a bar, about two bars minimum. |
 | TMJ's tempo was right but the grid put bar 1 on the snare. "The 1 bar is mostly falling on the snare." | Check the downbeat with a kick and snare histogram, and find the 1 from the bass stem's chord roots. |

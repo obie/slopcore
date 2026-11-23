@@ -5,9 +5,12 @@
   upload FILE [...]             upload, print the public URL; cached by SHA-256 in <project>/shots/uploads.json
   estimate --res 720p --dur 5 [--ar 16:9] [--video-in SECONDS] [--no-api]
                                 local formula (list price and at your account's discount, HF_DISCOUNT) plus POST /estimate/<model> (free; for Seedance 2.5 it returns the formula as text, not a number)
-  submit --project DIR --clip ID --mode ref|i2v|t2v --prompt-file TXT --dur N --res 720p --max-usd X
+  submit --project DIR --clip ID --mode ref|i2v|t2v|edit --prompt-file TXT --dur N --res 720p --max-usd X
          [--ar 16:9] [--image F ...] [--audio F ...] [--video F ...] [--first-frame F] [--last-frame F]
-         [--no-audio] [--bitrate standard|high] [--format mp4|mov] [--video-secs S ...] [--again] [--dry-run]
+         [--source-video F] [--no-audio] [--bitrate standard|high] [--format mp4|mov] [--video-secs S ...] [--again] [--dry-run]
+                                edit (video-edit): --source-video is the clip to change; the output keeps its length and
+                                framing (no --dur, no --ar); --image/--audio/--video add references. Priced here as the
+                                source's seconds both in and out, a conservative guess (the docs give no price)
                                 upload inputs, check ledger + estimate <= max-usd, submit with an Idempotency-Key,
                                 append a line to <project>/shots/ledger-hf.jsonl, print the request id.
                                 --dry-run prints the body and estimate and sends nothing (no upload, no API call)
@@ -27,9 +30,9 @@ import requests
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 API = 'https://api.higgsfield.ai'
-MODEL = 'bytedance/seedance-2.5'
-PATHS = {'ref': 'reference-to-video', 'i2v': 'image-to-video', 't2v': 'text-to-video'}
-DISCOUNT = float(os.environ.get('HF_DISCOUNT', '1.0'))   # fraction of list price the account pays; read it off the billing page
+MODEL = os.environ.get('HF_MODEL') or 'bytedance/seedance-2.5'   # HF_MODEL=bytedance/seedance-2.0 for 2.0 (pricing below is 2.5's)
+PATHS = {'ref': 'reference-to-video', 'i2v': 'image-to-video', 't2v': 'text-to-video', 'edit': 'video-edit'}
+DISCOUNT = float(os.environ.get('HF_DISCOUNT') or '1.0')   # fraction of list price the account pays; read it off the billing page
 TOK_PER_K = {'480p': 0.0214, '720p': 0.0214, '1080p': 0.0234}   # $ per 1000 tokens
 SHORT_SIDE = {'480p': 480, '720p': 720, '1080p': 1080}
 ARS = {'16:9': (16, 9), '9:16': (9, 16), '1:1': (1, 1), '4:3': (4, 3), '3:4': (3, 4), '21:9': (21, 9)}
@@ -193,7 +196,8 @@ def upload(project, path):
         die(f'upload PUT of {p.name}: HTTP {pr.status_code}')
     f, c = cache_load(project)
     c[sha256(p)] = {'url': d['public_url'], 'name': p.name, 'content_type': t, 'bytes': p.stat().st_size, 'uploaded_at': now()}
-    f.write_text(json.dumps(c, indent=1))
+    tmp = f.with_name(f'.{f.name}.{os.getpid()}')   # atomic replace: parallel submits read this cache (2026-10-31: a half-written file crashed one)
+    tmp.write_text(json.dumps(c, indent=1)); os.replace(tmp, f)
     return d['public_url']
 
 def media_secs(p):
@@ -277,6 +281,16 @@ def build_body(a, urls):
     b = {}
     if prompt:
         b['prompt'] = prompt
+    if a.mode == 'edit':
+        b['video_url'] = urls['source'][0]
+        b['resolution'] = a.res
+        for k in ('image_urls', 'video_urls', 'audio_urls'):
+            if urls.get(k):
+                b[k] = urls[k]
+        b['generate_audio'] = not a.no_audio
+        if a.bitrate:
+            b['bitrate_mode'] = a.bitrate
+        return b
     b['duration'] = a.dur
     b['resolution'] = a.res
     if a.mode == 'ref':
@@ -298,6 +312,21 @@ def build_body(a, urls):
     return b
 
 def cmd_submit(a):
+    if a.mode == 'edit':
+        if not a.source_video:
+            die('edit needs --source-video')
+        if a.first_frame or a.last_frame or a.ar_given:
+            die('edit takes no --first-frame/--last-frame/--ar; output follows the source video')
+        if not pathlib.Path(a.prompt_file).read_text().strip():
+            die('edit needs a non-empty prompt')
+        s = media_secs(a.source_video)
+        if s is None:
+            die('cannot measure the source video (no ffprobe)')
+        a.dur = max(4, math.ceil(s))
+    elif a.source_video:
+        die('--source-video is for --mode edit')
+    if a.dur is None:
+        die('--dur is required')
     if a.dur < 4 or a.dur > 30:
         die('--dur must be 4..30')
     if a.mode == 't2v' and (a.image or a.audio or a.video or a.first_frame or a.last_frame):
@@ -319,7 +348,8 @@ def cmd_submit(a):
     if a.last_frame and a.mode != 'i2v':
         die('--last-frame is i2v only')
     files = {'image_urls': a.image, 'video_urls': a.video, 'audio_urls': a.audio,
-             'first': [a.first_frame] if a.first_frame else [], 'last': [a.last_frame] if a.last_frame else []}
+             'first': [a.first_frame] if a.first_frame else [], 'last': [a.last_frame] if a.last_frame else [],
+             'source': [a.source_video] if a.source_video else []}
     for fs in files.values():
         for f in fs:
             if not pathlib.Path(f).is_file():
@@ -331,7 +361,7 @@ def cmd_submit(a):
         vsecs = [media_secs(f) for f in a.video]
         if any(s is None for s in vsecs):
             die('cannot measure video length (no ffprobe); pass --video-secs for each --video')
-    vin = float(sum(vsecs))
+    vin = float(sum(vsecs)) + (a.dur if a.mode == 'edit' else 0)
     ar = a.ar if a.mode != 'i2v' else '16:9'
     tok, usd, disc = cost(a.res, a.dur, ar, vin)
     print(f'estimate: {tok} tokens, list ${usd:.4f}, after discount ${disc:.4f}' + (' (approx: i2v follows the image aspect)' if a.mode == 'i2v' else ''), file=sys.stderr)
@@ -479,7 +509,7 @@ def main():
     p.add_argument('--no-api', action='store_true')
     p = add('submit', cmd_submit)
     p.add_argument('--clip', required=True); p.add_argument('--mode', required=True, choices=list(PATHS))
-    p.add_argument('--prompt-file', required=True); p.add_argument('--dur', type=int, required=True)
+    p.add_argument('--prompt-file', required=True); p.add_argument('--dur', type=int); p.add_argument('--source-video')
     p.add_argument('--res', default='720p', choices=list(SHORT_SIDE)); p.add_argument('--ar', default=None, choices=list(ARS))
     p.add_argument('--image', action='append', default=[]); p.add_argument('--audio', action='append', default=[])
     p.add_argument('--video', action='append', default=[]); p.add_argument('--video-secs', type=float, action='append')

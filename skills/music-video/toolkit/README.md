@@ -7,6 +7,7 @@ canvas renderer for lyrics and graphics.
 ## Layout
 
 - `tools/` command-line scripts. Each one finds the workspace root as the parent of `tools/`, which is this folder.
+- `review/page.html` the review page that `tools/serve.py` serves.
 - `engine/` the renderer: `render.py`, `index.html`, `src/*.js`, `fonts/` (SIL OFL, licences in `fonts/`) and `ANIMATION_GUIDE.md`.
 - `requirements.txt`, `.env.example`.
 
@@ -176,9 +177,9 @@ hfapi.py selftest                      check the local cost formula against the 
 hfapi.py auth                          confirm the key works (free)
 hfapi.py upload FILE [...]             upload, print the public URL; cached by SHA-256 in <project>/shots/uploads.json
 hfapi.py estimate --res 720p --dur 5 [--ar 16:9] [--video-in SECONDS] [--no-api]
-hfapi.py submit --project DIR --clip ID --mode ref|i2v|t2v --prompt-file TXT --dur N --res 720p --max-usd X
+hfapi.py submit --project DIR --clip ID --mode ref|i2v|t2v|edit --prompt-file TXT --dur N --res 720p --max-usd X
         [--ar 16:9] [--image F ...] [--audio F ...] [--video F ...] [--first-frame F] [--last-frame F]
-        [--no-audio] [--bitrate standard|high] [--format mp4|mov] [--video-secs S ...] [--again] [--dry-run]
+        [--source-video F] [--no-audio] [--bitrate standard|high] [--format mp4|mov] [--video-secs S ...] [--again] [--dry-run]
 hfapi.py status REQUEST_ID
 hfapi.py wait REQUEST_ID [--timeout 900]
 hfapi.py download REQUEST_ID OUT.mp4
@@ -188,6 +189,10 @@ hfapi.py ledger --project DIR
 
 `submit` uploads inputs, checks the ledger and the estimate against `--max-usd`, submits with an Idempotency-Key and
 appends a line to `<project>/shots/ledger-hf.jsonl`. `--dry-run` prints the body and estimate and sends nothing.
+`--mode edit` changes an existing clip: `--source-video` is the clip, the output keeps its length and framing (no
+`--dur`, no `--ar`), and `--image`, `--audio` and `--video` add references. The docs give no price for it, so the
+estimate counts the source's seconds both in and out. `HF_MODEL` picks another model id (the price formula is 2.5's),
+and `HF_DISCOUNT` is the fraction of list price your account pays (default 1.0; read it off the billing page).
 `status`, `wait`, `cancel` and `download` take an optional `--project DIR` (default: the workspace root) where terminal
 states are written to the ledger. Statuses: queued, in_progress, completed, failed, nsfw, canceled; failed, nsfw and
 canceled-while-queued are documented as not charged.
@@ -214,6 +219,7 @@ A block in `PROMPTS.md`:
 - kind: lips            (lips | motion | insert)
 - plate: sing-slice
 - t0: 8.30              (song time of the clip's first frame)
+- last: sing-slice-up   (insert only, optional: this plate is the exact last frame)
 - lines: 2              (lips only: lyric line numbers sung on camera; other words are muted)
 - story: one sentence
 ```
@@ -221,7 +227,7 @@ followed by a fenced block holding the prompt exactly as it will be sent, after 
 
 Kinds: `lips` is reference-to-video with the plate as `@Image1` and a clean vocal holding only the quoted lines as
 `@Audio1`; `motion` is reference-to-video with the song from t0 as `@Audio1`; `insert` is image-to-video with the plate
-as the exact first frame, silent. The sync check cross-correlates the take's audio with what it was given to find the
+as the exact first frame, silent, and with `- last:` a second plate as the exact last frame. The sync check cross-correlates the take's audio with what it was given to find the
 lag, and for lips clips locates each sung word with Whisper. `WHISPER_LANGUAGE` sets the language of that check.
 
 ### flashscan.py
@@ -241,6 +247,25 @@ neighbours and keeps the original in `media/scratch/flash-fix/`. Queso's 12,018 
 picture, lyric surface, graphics and method, and the picked plate. Click a plate to open it full size; arrow keys step,
 F flags, a comment box takes a note. `serve` runs a local server (default port 8765) that saves flags and comments to
 `<project>/notes.json`; `serve PORT --share` is view-only and serves only the page, the plate images, the clips and the notes.
+
+### serve.py
+
+`serve.py <project> [port]`: the local review server (default port 8765). `http://127.0.0.1:8765/review/<name>` shows
+the review described by `<project>/review/<name>.json`: sections of items, each with `id`, `src` (a path under the
+project), `kind` (`video` or `image`) and `label`, and optionally `title`, `details` (a list of `{name, text}`) and
+`url`. Every item gets a player or an image, Pick, Fix and Nix buttons and a note box. Votes and notes save as they are
+made to `<project>/review/<name>.feedback.json`; images open in a lightbox (arrow keys step, Esc closes). The server
+answers byte-range requests, so video seeks.
+
+It serves the whole project folder, so it binds `127.0.0.1` only. It refuses requests whose `Host` is not its own
+address and writes that come from another web page, never lists folders, and never serves a dotfile.
+
+### serve_tailnet.py
+
+`serve_tailnet.py <project> [port]`: the same review pages on the machine's Tailscale address (default port 8767), for
+reviewing from a phone. Only `/review/...` and `/api/feedback/<name>` are reachable: the pages, the manifests, the
+votes and notes, and whatever media sits under `<project>/review/`. Keep the files a review shows in that folder.
+Needs the `tailscale` command; anyone on the tailnet can open the pages and vote.
 
 ### review.py
 

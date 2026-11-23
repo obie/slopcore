@@ -76,7 +76,7 @@ def upload(path):
             time.sleep(3 * (attempt + 1))
     cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
     cache[ck] = d["public_url"]
-    tmp = CACHE.with_suffix(".tmp"); tmp.write_text(json.dumps(cache, indent=1)); os.replace(tmp, CACHE)
+    tmp = CACHE.with_suffix(f".{os.getpid()}.tmp"); tmp.write_text(json.dumps(cache, indent=1)); os.replace(tmp, CACHE)   # per-process tmp: parallel jobs raced on one .tmp
     return d["public_url"]
 
 
